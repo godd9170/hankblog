@@ -1,4 +1,5 @@
 title: surf
+banner: '/images/surf.jpg'
 ---
 
 I never understood surfing. I'm not dismissing it, I never claimed it to be an easy art, nor do I think it's not appealing, I'm merely saying I truly didn't understand it. I'd put some time in on a wakeboard in the past, and I suppose I assumed it to be a similar sensation. I was quite wrong.
