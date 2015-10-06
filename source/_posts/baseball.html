@@ -1,0 +1,300 @@
+title: BaseBall Trip
+date: 2015-10-06 3:50:40
+banner: '/images/ball.jpg'
+titleColour: '#fff'
+tags: ['baseball', 'roadtrip']
+---
+
+<body>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+  <!-- I recommend you host this file on your own, since this will change without warning -->
+  <script src="http://datamaps.github.io/scripts/datamaps.usa.min.js?v=1"></script>
+  <style>
+    .indicator {
+      border-radius: 50%;
+      height: 12px;
+      width: 12px;
+      display: inline-block;
+      margin: 0 3px;
+    }
+  </style>
+
+
+  <p>
+    Each year my father, brother and myself embark on a trip to a new MLB stadium to enjoy America's favourite passtime. We'd managed to hit the majority of the AL East and a number of others. As it stands we've made it to the following parks shown below.
+  </p>
+  <p>
+    The goal is for my brother and myself to check of the remaining parks, hopefully one day with boys of our own. I'll continue to update this as we visit more.
+  </p>
+
+  <div id="legend">
+    <div class='indicator' style="background-color: green;"></div><span>Visited</span></br>
+    <div class='indicator' style="background-color: red;"></div><span>Not Visited (yet!)</span>
+  </div>
+  <div id="container1" style="position: relative; width: 100%; height: 400px;"></div>
+ 
+ <script>
+     
+     var baseball = new Datamap({
+      scope: 'usa',
+      element: document.getElementById('container1'),
+
+      fills: {
+      'TravelledTo': 'green',
+      'TeamExists' : 'red',
+      defaultFill: '#eaeaea'
+      },
+
+    });
+
+    baseball.bubbles([
+        {
+          park: 'Comerica Park',
+          team: 'Tigers',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 40.639722,
+          longitude: -73.778889
+        },
+        {
+          park: 'Petco Park',
+          team: 'Padres',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 32.7150,
+          longitude: -117.1625
+        },
+        {
+          park: 'Angel Stadium',
+          team: 'Angels',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 33.80027777777777,
+          longitude: -117.88277777777778
+        },
+        {
+          park: 'Dodger Stadium',
+          team: 'Dodgers',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 34.0736,
+          longitude: -118.2400
+        },
+        {
+          park: 'Oakland-Alameda County Coliseum',
+          team: 'Athletics',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 37.7517,
+          longitude: -122.2006
+        },
+        {
+          park: 'AT&T Park',
+          team: 'Giants',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 37.945277777777775,
+          longitude: -122.38916666666667
+        },
+        {
+          park: 'Tropicana Field',
+          team: 'Rays',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 27.7683,
+          longitude: -82.6533
+        },
+        {
+          park: 'Marlins Park',
+          team: 'Marlins',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 25.7781,
+          longitude: -80.2197
+        },        
+        {
+          park: 'U.S. Cellular Field',
+          team: 'White Sox',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 41.8300,
+          longitude: -87.6339
+        },
+        {
+          park: 'Wrigley Field',
+          team: 'Cubs',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 41.94833333333333,
+          longitude: -87.65555555555557
+        },
+        {
+          park: 'Nationals Park',
+          team: 'Nationals',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 38.8728,
+          longitude: -77.0075
+        },
+        {
+          park: 'Oriole Park',
+          team: 'Orioles',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 39.2839,
+          longitude: -76.6217
+        },      
+        {
+          park: 'Fenway Park',
+          team: 'Red Sox',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 42.3464,
+          longitude: -71.0975
+        },      
+        {
+          park: 'Comerica Park',
+          team: 'Tigers',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 42.3392,
+          longitude: -83.0486
+        },      
+        {
+          park: 'Busch Stadium',
+          team: 'Cardinals',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 38.6225,
+          longitude: -90.1931
+        },
+        {
+          park: 'Yankee Stadium',
+          team: 'Yankees',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 40.8292,
+          longitude: -73.9264
+        },
+        {
+          park: 'Citi Field',
+          team: 'Mets',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 40.7569,
+          longitude: -73.8458
+        },      
+        {
+          park: 'Progressive Field',
+          team: 'Indians',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 41.4958,
+          longitude: -81.6853
+        },
+        {
+          park: 'Great American Ball Park',
+          team: 'Reds',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 39.097500000000004,
+          longitude: -84.50666666666666
+        },      
+        {
+          park: 'PNC Park',
+          team: 'Pirates',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 40.4469,
+          longitude: -80.0058
+        },
+        {
+          park: 'Citizens Bank Park',
+          team: 'Phillies',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 39.9058,
+          longitude: -75.1664
+        },      
+        {
+          park: 'Safeco Field',
+          team: 'Mariners',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 47.5914,
+          longitude: -122.3325
+        },      
+        {
+          park: 'Chase Field',
+          team: 'Diamondbacks',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 33.4453,
+          longitude: -112.0669
+        },      
+        {
+          park: 'Coors Field',
+          team: 'Rockies',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 39.75611111111111,
+          longitude: -104.99416666666667
+        },
+        {
+          park: 'Globe Life Park',
+          team: 'Rangers',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 32.75138888888889,
+          longitude: -97.08277777777778
+        },
+              {
+          park: 'Minute Maid Park',
+          team: 'Astros',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 29.7569,
+          longitude: -95.3556
+        },
+        {
+          park: 'Kauffman Stadium',
+          team: 'Royals',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 39.0514,
+          longitude: -94.4806
+        },      
+        {
+          park: 'Turner Field',
+          team: 'Braves',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 33.7353,
+          longitude: -84.3894
+        },
+        {
+          park: 'Miller Park',
+          team: 'Brewers',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 43.0283,
+          longitude: -87.9711
+        },      
+        {
+          park: 'Target Field',
+          team: 'Twins',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 44.98166666666667,
+          longitude: -93.27833333333334
+        },
+
+      ], {
+      popupTemplate: function(geo, data) {
+        return '<div class="hoverinfo"> Park: ' + data.park + '</br> Team: ' + data.team + ' '
+      }
+    });
+    baseball.labels();
+  </script>
+</body>
