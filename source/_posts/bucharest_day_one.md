@@ -1,6 +1,6 @@
 title: Blending In
 date: 2015-10-29 11:12:40
-banner: '/images/perspective.png'
+banner: '/images/bucharest.jpg'
 titleColour: '#000'
 tags: ['Bucharest', 'gym']
 ---
