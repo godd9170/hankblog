@@ -1,6 +1,7 @@
 title: surf
 date: 2015-05-20 07:42:17
 banner: '/images/surf.jpg'
+titleColour: '#fff'
 tags: ['surf', 'oregon', 'waves']
 ---
 

@@ -1,7 +1,7 @@
 title: Perspective
 date: 2015-09-01 11:12:40
 banner: '/images/perspective.png'
-titleColour: '#000'
+titleColour: '#fff'
 tags: ['art', 'perspective']
 ---
 
