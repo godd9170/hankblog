@@ -1,0 +1,320 @@
+title: Romanian Road Trip
+date: 2015-11-30 3:50:40
+banner: '/images/romtrip.jpg'
+titleColour: '#fff'
+tags: ['romania', 'roadtrip']
+---
+<style>
+
+.subunit { fill: #f1f1f1; }
+
+.subunit-boundary {
+  fill: none;
+  stroke: #777;
+  stroke-dasharray: 2,2;
+  stroke-linejoin: round;
+}
+
+.place {
+  fill: #000;
+}
+
+.roadtrip-poi {
+  fill: transparent;
+  stroke: transparent;
+}
+
+.roadtrip-poi-after {
+  fill: #BD0000;
+  stroke: #fff;
+  cursor: pointer;
+}
+
+.roadtrip-poi-label {
+  fill: transparent;
+  font-family: sans-serif;
+}
+
+.roadtrip-poi-label-after {
+  fill: #000;
+  font-family: sans-serif;
+}
+
+
+
+.roadtrip-line {
+  fill: transparent;
+  stroke: #BD0000;
+}
+
+.place-label {
+  font-family: sans-serif;
+  fill: #000;
+  font-size: 10px;
+  font-weight: 100;
+  text-anchor: middle;
+}
+
+</style>
+<div style="width: 100%;">
+  <h4 style="text-align: center;">Romania</h4>
+  <div id="map"></div>
+  <span id="info">
+    <h3>Romanian Road-Trip</h3>
+    <p> 
+      Part of the joy of living with locals while travelling is that you can embark on weekend long roadtrips with no need to plan. I discovered this as Bogdan, Iulius and I set sail on Halloween Saturday morning with some long coffees and <a href="https://en.wikipedia.org/wiki/Automobile_Dacia">Dacia</a> full of gas. Beyond the direction we were headed being North, I was completely unbeknownst as to what the trip had in store, and I wouldn't have it any other way.
+    </p>
+    <p>
+      Above you'll see the route of our travels. Click any of the red circles to read more about that stop of our journey.
+    </p>
+  </span>
+  <!--Sigi-->
+  <span id="sigi" style="display: none;">
+    <h3>Sighișoara</h3>
+    <p>
+      Sighișoara is gorgeous. It's one of the only inhabited fortified citadels in Europe, and it's been well taken care of. In the middle of the town is a big assed clock tower that you can (for a small fee) still access the top of. Here's the unreal view from it, and supporting evidence of my 'gorgeous' claim. 
+    </p>
+    <img src="/images/romtrip/sigi.jpg"/>
+    <p>
+      We spent the night here at a BnB owned probably the most overwhelmingly friendly people I've met. After checking in we given a shot of <a href="https://en.wikipedia.org/wiki/P%C3%A1linka">Pálinka</a> (which sends shivers down your spine its so strong) and shown our rooms. While making some plans for the night with my travelling companions, a knock on our door yielded a complimentary bottle of wine from our hostesses to welcome me to Romania.
+    </p>
+    <p>
+      Best part of Sighi? The breakfast we had Sunday morning. The only thing more beautiful than the view was out waitress. Check out this place:
+    </p>
+    <img src="/images/romtrip/breaky.jpg"/>
+  </span>
+  <!--Bran-->
+  <span id="bran" style="display: none;">
+    <h3>Castle Bran</h3>
+    <p>
+      I'm told the celebration of Halloween is rather new in Europe, and costumes seem to be much less elobroate than that of 'go-hard' Western norms. Perhpas it's appropriate then, that our first stop on the journey was non other than Dracula's castle.
+    </p>
+    <img src="/images/romtrip/bran.jpg" />
+    <p>
+     'Castle Bran' as they insisted on calling it despite my objection, is quite the sight. It's converted into a museum that offers a slew of inforation both on the history of the Castle and the origins of Bram Stoker's novel. Non of this I read, as I was too busy trying to craft witty Snapchats and insisting to my co-travellers that dracula still resided here. Key takeaway? Iulius is actually Vlad the Impaler's, the Ruler whom Dracula is believed to be based on, great-great-great-grandson. 
+    </p>
+    <img src="/images/romtrip/dracoolie.jpg" />
+  </span>
+  <!--Viscri-->
+  <span id="visci" style="display: none;">
+    <h3>Viscri</h3>
+    <p>
+      Viscri is a tiny little town, and to my point earlier would likely never have been on the itinerary had I not been accompanied by native Romanians. It has a fortified church in its centre and for an even more modest fee than the tower in Sighișoara you can climb to it's apex. 
+    </p>
+    <p>
+      This leg of the journey I was handed the keys to Iulius' white Dacia - and I was pretty pumped. Driving in rural Romania is a lot like Prince Edward County, except even more potholes, and farmers aren't as concerned about their livestock wandering across roads.
+    </p>
+    <img src="/images/romtrip/cowcross.jpg" />
+  </span>
+  <!--Rupea-->
+  <span id="rupea" style="display: none;">
+    <h3>Rupea</h3>
+    <p>
+      The theme of the trip seemed to be citadels, as we stopped in Rupea to view yet another relic of medieval Romania. The fort has a spiral path up to the top, where I elected to ruin all of the majesty by performing the childish obsession of my generation.
+    </p>
+    <img src="/images/romtrip/rupea.jpg" />
+  </span>
+  <!--Brasov-->
+  <span id="bras" style="display: none;">
+    <h3>Brașov</h3>
+    <p>
+      Brașov is where I learned that 'ș' makes a 'shh' sound. I also learned what the hell a <a href="https://en.wikipedia.org/wiki/K%C3%BCrt%C5%91skal%C3%A1cs">Kürtőskalács</a> is. It's a delicious baked ring of dough that is coated in sugar. It turns out that butter sugar and flour are tasty no matter where you go.
+    </p>
+    <p>
+      I was also pretty amused to see a familar concept located up in the hills overlooking the city of 200,000+.
+    </p>
+    <img src="/images/romtrip/brasov.jpg" />
+  </span>
+  <!--Bucharest-->
+  <span id="buch" style="display: none;">
+    <h3>Bucharest</h3>
+    <p>
+      This has been my home for the last month. By far largest city in Romania (over 2 million) and certainly no shortage of old world beauty. I've talked enough about the city in blogs past, but here is a picture of the stone eagle, perched atop the <a href="https://en.wikipedia.org/wiki/Palace_of_the_National_Military_Circle">Cercul Militar Național</a> that peers into my room from across the street each morning.
+    </p>
+    <img src="/images/romtrip/eagle.jpg"/>
+  </span>
+</div>
+<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="//d3js.org/topojson.v1.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+
+var onPOIClick = function(d) {
+  console.log("name: ", d.properties.name)
+  var info = '';
+  switch(d.properties.name) {
+    case "Castle Bran":
+        info = $('#bran').html();
+        break;
+    case "Bucharest":
+        info = $('#buch').html();
+        break;
+    case "Sighișoara":
+        info = $('#sigi').html();
+        break;
+    case "Brașov":
+        info = $('#bras').html();
+        break;
+    case "Rupea":
+        info = $('#rupea').html();
+        break;
+    case "Viscri":
+        info = $('#visci').html();
+        break;
+    default:
+        info = "<b>ERROR!</b>"
+}
+  $('#info').html(info);
+};
+
+var width = document.getElementById('map').offsetWidth,
+    height = 400;
+
+var svg = d3.select("#map").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+d3.json("/data/romania-trip.json", function(error, romania) {
+  if (error) return console.error(error);
+
+  console.log("ROM: ", romania);
+  var subunits = topojson.feature(romania, romania.objects.ROU);
+
+  console.log(romania.objects.ROU);
+
+  var projection = d3.geo.albers()
+    .center([25.500, 45.3167])
+    .rotate([0, 0])
+    .parallels([40, 50])
+    .scale(12600)
+    .translate([width / 2, height / 2]);
+
+  var path = d3.geo.path()
+      .projection(projection);
+
+  svg.append("path")
+      .datum(subunits)
+      .attr("d", path);
+
+  //apply classes to the polygons (romania)
+  svg.selectAll(".subunit")
+    .data(topojson.feature(romania, romania.objects.ROU).features)
+  .enter().append("path")
+    .attr("class", function(d) { return "subunit " + d.id; })
+    .attr("d", path);
+
+  //get external borders
+  svg.append("path")
+    .datum(topojson.mesh(romania, romania.objects.ROU, function(a, b) { return a === b; }))
+    .attr("d", path)
+    .attr("class", "subunit-boundary");
+
+  //city circles
+  svg.append("path")
+    .datum(topojson.feature(romania, romania.objects.places))
+    .attr("d", path.pointRadius(4))
+    .attr("class", "place");
+
+  //city labels
+  svg.selectAll(".place-label")
+    .data(topojson.feature(romania, romania.objects.places).features)
+  .enter().append("text")
+    .attr("class", "place-label")
+    .attr("transform", function(d) { return "translate(" + projection(d.geometry.coordinates) + ")"; })
+    .attr("dy", ".55em")
+    .text(function(d) { return d.properties.name; });
+
+  //right justify places left of middle and visa versa
+  svg.selectAll(".place-label")
+    .attr("x", function(d) { return d.geometry.coordinates[0] > -1 ? 9 : -9; })
+    .style("text-anchor", function(d) { return d.geometry.coordinates[0] > -1 ? "start" : "end"; });
+
+  //roadtrip line
+  var roady = svg.append("path")
+    .datum(topojson.feature(romania, romania.objects.roadtripline))
+    .attr("d", path)
+    .attr("class", "roadtrip-line");
+
+
+  //roadtrip circles
+  var POIs = svg.append("path")
+      .datum(topojson.feature(romania, romania.objects.roadtripPOI))
+      .attr("d", path);
+
+  svg.selectAll("roadtrip-poi")
+    .data(topojson.feature(romania, romania.objects.roadtripPOI).features)
+  .enter().append("path")
+    .attr("class", function(d) { return "roadtrip-poi " + d.id; })
+    .attr("d", path.pointRadius(1))
+    .on("click", function(d){
+      onPOIClick(d);
+    })
+    .transition()
+        .delay(6000)
+        .duration(400)
+        .ease("linear")
+        .attr("d", path.pointRadius(8))
+        .attr("class", "roadtrip-poi-after");
+
+  //POI labels
+  var POIlabels = svg.selectAll("roadtrip-poi")
+    .data(topojson.feature(romania, romania.objects.roadtripPOI).features)
+  .enter().append("text")
+    .attr("class", "roadtrip-poi-label")
+    .attr("transform", function(d) { return "translate(" + projection(d.geometry.coordinates) + ")"; })
+    .attr("dy", ".4em")
+    .text(function(d) { return d.properties.name; });
+
+  //right justify places left of middle and visa versa
+  svg.selectAll(".roadtrip-poi-label")
+    .attr("x", function(d) { 
+      if (d.properties.name === "Viscri" || d.properties.name === "Bucharest") {
+        return -12;
+      } else {
+        return 12;
+      }
+    })
+    //.attr("x", function(d) { return d.geometry.coordinates[0] > -1 ? 9 : -9; })
+    .style("text-anchor", function(d) { 
+      if (d.properties.name === "Viscri" || d.properties.name === "Bucharest") {
+        return "end";
+      } else {
+        return "start";
+      }
+    })
+
+  //animate the POIs
+  POIlabels
+    .transition()
+          .delay(6000)
+          .duration(400)
+          .ease("linear")
+          .attr("class", "roadtrip-poi-label-after");
+
+  POIs
+    .transition()
+        .delay(6000)
+        .duration(400)
+        .ease("linear")
+        .attr("d", path.pointRadius(8))
+        .attr("class", "roadtrip-poi-after");
+
+
+
+
+
+  //animate the roady
+  var totalLength = roady.node().getTotalLength();
+
+    roady
+      .attr("stroke-dasharray", totalLength + " " + totalLength)
+      .attr("stroke-dashoffset", totalLength)
+      .transition()
+        .duration(6000)
+        .ease("linear")
+        .attr("stroke-dashoffset", 0);
+
+
+});
+
+</script>
