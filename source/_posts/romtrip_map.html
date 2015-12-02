@@ -6,6 +6,14 @@ tags: ['romania', 'roadtrip']
 ---
 <style>
 
+.location-header {
+  padding: 0;
+  font-weight: bold;
+  line-height: 1;
+  font-family: Bebas, sans-serif;
+  font-size: 22px;
+}
+
 .subunit { fill: #f1f1f1; }
 
 .subunit-boundary {
@@ -72,7 +80,7 @@ tags: ['romania', 'roadtrip']
   <h4 style="text-align: center;">Romania</h4>
   <div id="map"></div>
   <span id="info">
-    <h3>Romanian Road-Trip</h3>
+    <span class="location-header">Romanian Road-Trip</span>
     <p> 
       Part of the joy of living with locals while travelling is that you can embark on weekend long roadtrips with no need to plan. I discovered this as Bogdan, Iulius and I set sail on Halloween Saturday morning with some long coffees and <a href="https://en.wikipedia.org/wiki/Automobile_Dacia">Dacia</a> full of gas. Beyond the direction we were headed being North, I was completely unbeknownst as to what the trip had in store, and I wouldn't have it any other way.
     </p>
@@ -82,7 +90,7 @@ tags: ['romania', 'roadtrip']
   </span>
   <!--Sigi-->
   <span id="sigi" style="display: none;">
-    <h3>Sighișoara</h3>
+    <span class="location-header">Sighișoara</span>
     <p>
       Sighișoara is gorgeous. It's one of the only inhabited fortified citadels in Europe, and it's been well taken care of. In the middle of the town is a big assed clock tower that you can (for a small fee) still access the top of. Here's the unreal view from it, and supporting evidence of my 'gorgeous' claim. 
     </p>
@@ -97,7 +105,7 @@ tags: ['romania', 'roadtrip']
   </span>
   <!--Bran-->
   <span id="bran" style="display: none;">
-    <h3>Castle Bran</h3>
+    <span class="location-header">Castle Bran</span>
     <p>
       I'm told the celebration of Halloween is rather new in Europe, and costumes seem to be much less elobroate than that of 'go-hard' Western norms. Perhaps it's appropriate then, that our first stop on the journey was non other than Dracula's castle.
     </p>
@@ -109,7 +117,7 @@ tags: ['romania', 'roadtrip']
   </span>
   <!--Viscri-->
   <span id="visci" style="display: none;">
-    <h3>Viscri</h3>
+    <span class="location-header">Viscri</span>
     <p>
       Viscri is a tiny little town, and to my point earlier would likely never have been on the itinerary had I not been accompanied by native Romanians. It has a fortified church in its centre and for an even more modest fee than the tower in Sighișoara you can climb to its apex. 
     </p>
@@ -120,7 +128,7 @@ tags: ['romania', 'roadtrip']
   </span>
   <!--Rupea-->
   <span id="rupea" style="display: none;">
-    <h3>Rupea</h3>
+    <span class="location-header">Rupea</span>
     <p>
       The theme of the trip seemed to be citadels, as we stopped in Rupea to view yet another relic of medieval Romania. The fort has a spiral path up to the top, where I elected to ruin all of the majesty by performing the childish obsession of my generation.
     </p>
@@ -128,7 +136,7 @@ tags: ['romania', 'roadtrip']
   </span>
   <!--Brasov-->
   <span id="bras" style="display: none;">
-    <h3>Brașov</h3>
+    <span class="location-header">Brașov</span>
     <p>
       Brașov is where I learned that 'ș' makes a 'shh' sound. I also learned what the hell a <a href="https://en.wikipedia.org/wiki/K%C3%BCrt%C5%91skal%C3%A1cs">Kürtőskalács</a> is. It's a delicious baked ring of dough that is coated in sugar. It turns out that butter sugar and flour are tasty no matter where you go.
     </p>
@@ -139,7 +147,7 @@ tags: ['romania', 'roadtrip']
   </span>
   <!--Bucharest-->
   <span id="buch" style="display: none;">
-    <h3>Bucharest</h3>
+    <span class="location-header">Bucharest</span>
     <p>
       This has been my home for the last month. By far largest city in Romania (over 2 million) and certainly no shortage of old world beauty. I've talked enough about the city in blogs past, but here is a picture of the stone eagle, perched atop the <a href="https://en.wikipedia.org/wiki/Palace_of_the_National_Military_Circle">Cercul Militar Național</a> that peers into my room from across the street each morning.
     </p>
@@ -151,10 +159,17 @@ tags: ['romania', 'roadtrip']
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script>
 
-var onPOIClick = function(d) {
-  console.log("name: ", d.properties.name)
+//Catch the table of contents URL anchor and relocate appropriately
+function getHash() {
+  var hash = window.location.hash;
+  navigate(hash);
+  console.log("HASH: ", hash);
+  return hash.substring(1); // remove #
+}
+
+var navigate = function(name) {
   var info = '';
-  switch(d.properties.name) {
+  switch(name) {
     case "Castle Bran":
         info = $('#bran').html();
         break;
@@ -175,9 +190,12 @@ var onPOIClick = function(d) {
         break;
     default:
         info = "<b>ERROR!</b>"
-}
+  }
   $('#info').html(info);
-  //d.attr("class", function(d) {return (d.class + " active")});
+};
+
+var onPOIClick = function(d) {
+  navigate(d.properties.name);
 };
 
 var width = document.getElementById('map').offsetWidth,
