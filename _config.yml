@@ -69,6 +69,6 @@ theme: next
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/godd9170/hankblog.git
+  repo: https://github.com/godd9170/blog.git
   branch: master
   message: Blog updated {{ now("YYYY-MM-DD HH:mm:ss") }}
