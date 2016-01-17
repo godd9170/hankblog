@@ -1,0 +1,123 @@
+/****************************************** 
+* Main Resume Stylings                    *
+*******************************************/
+.lead-up {
+  font-size: 0.8em; }
+
+.main-inner {
+  width: auto;
+  min-width: 90% !important; }
+  .main-inner .content {
+    width: auto;
+    min-width: 90% !important; }
+
+.resume {
+  box-sizing: border-box; }
+  .resume .section-header {
+    font-size: 2em; }
+    .resume .section-header i {
+      padding-right: 8px; }
+  .resume .section-subtitle {
+    font-size: 10px;
+    display: inline-block;
+    vertical-align: top; }
+  .resume .timeline {
+    height: 180px; }
+  .resume .row .cell .cell-header {
+    position: relative;
+    font-size: 0.8em; }
+    .resume .row .cell .cell-header .badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0 4px;
+      margin: 15px 10px;
+      background-color: #ccc;
+      color: #fff;
+      font-size: 0.8em; }
+    .resume .row .cell .cell-header .workplace-icon {
+      font-size: 2em;
+      padding-bottom: 0; }
+      .resume .row .cell .cell-header .workplace-icon a {
+        border-bottom: 1px solid transparent;
+        transition-property: border-color;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 0s; }
+        .resume .row .cell .cell-header .workplace-icon a:hover {
+          border-bottom: 1px solid #999; }
+      .resume .row .cell .cell-header .workplace-icon.smaller {
+        font-size: 1.4em;
+        padding: 12px 0; }
+    .resume .row .cell .cell-header .workplace-title {
+      font-size: 0.8em;
+      margin-top: -10px;
+      color: #444; }
+  .resume .row .cell .cell-body .description {
+    font-size: 0.9em; }
+    .resume .row .cell .cell-body .description .timeframe {
+      color: #000; }
+  .resume .row .cell .cell-body .chart {
+    margin: 0 auto;
+    width: 100%; }
+  .resume .row .cell .cell-body .chart-text {
+    padding: 10px;
+    height: 180px; }
+  .resume .row .cell .cell-body .other-software {
+    width: 100%;
+    padding-top: 10px; }
+    .resume .row .cell .cell-body .other-software i {
+      font-size: 1.5em; }
+    .resume .row .cell .cell-body .other-software .resume-icon-ps:hover {
+      color: #00A4E4; }
+    .resume .row .cell .cell-body .other-software .resume-icon-id:hover {
+      color: #FF408C; }
+    .resume .row .cell .cell-body .other-software .resume-icon-ai:hover {
+      color: #FBB034; }
+    .resume .row .cell .cell-body .other-software .resume-icon-docx:hover {
+      color: #00188f; }
+    .resume .row .cell .cell-body .other-software .resume-icon-xlsx:hover {
+      color: #007233; }
+    .resume .row .cell .cell-body .other-software .resume-icon-ppt:hover {
+      color: #dd5900; }
+    .resume .row .cell .cell-body .other-software .resume-icon-finalcut:hover {
+      color: #a9a9f6; }
+    .resume .row .cell .cell-body .other-software .resume-icon-webpack:hover {
+      color: #A2BDE9; }
+    .resume .row .cell .cell-body .other-software .resume-icon-windows:hover {
+      color: #00bcf2; }
+    .resume .row .cell .cell-body .other-software .resume-icon-mac:hover {
+      color: #b3b3b3; }
+    .resume .row .cell .cell-body .other-software .resume-icon-linux:hover {
+      color: #000; }
+    .resume .row .cell .cell-body .other-software:hover {
+      cursor: pointer; }
+  .resume .row .cell .cell-body .other-software-chart {
+    width: 100%; }
+    .resume .row .cell .cell-body .other-software-chart #other-software-bar {
+      height: 10px;
+      width: 80%;
+      display: inline-block;
+      -webkit-transition: width 1.5s;
+      /* Safari */
+      transition: width 1.5s;
+      background-color: #fff; }
+      .resume .row .cell .cell-body .other-software-chart #other-software-bar #other-software-feature-name {
+        font-size: 10px; }
+    .resume .row .cell .cell-body .other-software-chart .other-software-feature {
+      width: 40px;
+      display: inline-block; }
+      .resume .row .cell .cell-body .other-software-chart .other-software-feature i {
+        font-size: 1.5em; }
+    .resume .row .cell .cell-body .other-software-chart #other-software-percentage {
+      font-size: 9px;
+      vertical-align: top; }
+    .resume .row .cell .cell-body .other-software-chart .other-software-legend {
+      display: flex;
+      width: 100%;
+      text-align: center; }
+      .resume .row .cell .cell-body .other-software-chart .other-software-legend .other-software-legend-value {
+        flex: 1;
+        font-size: 10px; }
+
+/*# sourceMappingURL=resume.css.map */
