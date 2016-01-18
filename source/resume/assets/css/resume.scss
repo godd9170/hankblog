@@ -66,7 +66,7 @@
           }
           &.smaller {
             font-size: 1.4em;
-            padding: 12px 0;
+            padding: 7px 0;
           }
         }
         .workplace-title {
@@ -147,6 +147,23 @@
             }
           }
         }
+      }
+    }
+  }
+  .pub {
+    margin: 0 auto;
+    height: 200px;
+    a {
+      img {
+          -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+          filter: grayscale(100%);
+          opacity: 0.4;
+          margin: 0 auto;
+          &:hover {
+            -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+            filter: grayscale(0%);
+            opacity: 1;
+          }
       }
     }
   }

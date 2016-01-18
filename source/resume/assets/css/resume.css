@@ -48,7 +48,7 @@
           border-bottom: 1px solid #999; }
       .resume .row .cell .cell-header .workplace-icon.smaller {
         font-size: 1.4em;
-        padding: 12px 0; }
+        padding: 7px 0; }
     .resume .row .cell .cell-header .workplace-title {
       font-size: 0.8em;
       margin-top: -10px;
@@ -119,5 +119,19 @@
       .resume .row .cell .cell-body .other-software-chart .other-software-legend .other-software-legend-value {
         flex: 1;
         font-size: 10px; }
+  .resume .pub {
+    margin: 0 auto;
+    height: 200px; }
+    .resume .pub a img {
+      -webkit-filter: grayscale(100%);
+      /* Chrome, Safari, Opera */
+      filter: grayscale(100%);
+      opacity: 0.4;
+      margin: 0 auto; }
+      .resume .pub a img:hover {
+        -webkit-filter: grayscale(0%);
+        /* Chrome, Safari, Opera */
+        filter: grayscale(0%);
+        opacity: 1; }
 
 /*# sourceMappingURL=resume.css.map */
