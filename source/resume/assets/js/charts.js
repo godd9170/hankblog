@@ -124,7 +124,7 @@ function drawCharts() {
       minValue: 0,
       maxValue: 1,
       format: 'percent',
-      textPosition: 'out'
+      textPosition: 'none'
     },
     vAxis: {
       title: "Skills",
