@@ -51,11 +51,11 @@ var resumeData = {
             {"id":"","label":"Percentage","pattern":"","type":"number"}
           ],
       "rows": [
-            {"c":[{"v":"Front-End Development","f":null},{"v":60,"f":null}]},
-            {"c":[{"v":"Presentations","f":null},{"v":5,"f":null}]},
+            {"c":[{"v":"Front-End Development","f":null},{"v":40,"f":null}]},
             {"c":[{"v":"Back-End Development","f":null},{"v":10,"f":null}]},
-            {"c":[{"v":"Support","f":null},{"v":10,"f":null}]},
-            {"c":[{"v":"Product Design","f":null},{"v":15,"f":null}]}
+            {"c":[{"v":"Support","f":null},{"v":15,"f":null}]},
+            {"c":[{"v":"Product Design","f":null},{"v":15,"f":null}]},
+            {"c":[{"v":"Customer Success","f":null},{"v":20,"f":null}]}
           ]
     },
     "axonifyData" : {
@@ -64,10 +64,11 @@ var resumeData = {
             {"id":"","label":"Percentage","pattern":"","type":"number"}
           ],
       "rows": [
-            {"c":[{"v":"Sales Meeting Prep","f":null},{"v":45,"f":null}]},
+            {"c":[{"v":"Sales Meeting Prep","f":null},{"v":35,"f":null}]},
             {"c":[{"v":"In-Bound Marketing","f":null},{"v":35,"f":null}]},
-            {"c":[{"v":"Administrative Assistance","f":null},{"v":10,"f":null}]},
-            {"c":[{"v":"Market Research","f":null},{"v":10,"f":null}]}
+            {"c":[{"v":"Administrative Assistance","f":null},{"v":5,"f":null}]},
+            {"c":[{"v":"Market Research","f":null},{"v":5,"f":null}]},
+            {"c":[{"v":"Customer Success","f":null},{"v":15,"f":null}]},
           ]
     },
     "d2lData" : {
@@ -78,7 +79,8 @@ var resumeData = {
       "rows": [
             {"c":[{"v":"SQL Database Maintenance","f":null},{"v":10,"f":null}]},
             {"c":[{"v":"Customer Support Calls","f":null},{"v":45,"f":null}]},
-            {"c":[{"v":"Bug Reporting","f":null},{"v":45,"f":null}]},
+            {"c":[{"v":"Bug Reporting","f":null},{"v":30,"f":null}]},
+            {"c":[{"v":"Technical Account Managment","f":null},{"v":15,"f":null}]},
           ]
     },
     "electrolabData" : {
