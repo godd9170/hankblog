@@ -1,0 +1,76 @@
+title: 'Italia'
+date: 2016-03-28 12:06:17
+banner: '/images/ipt1.jpg'
+titleColour: '#fff'
+tags: ['Italy', 'wine', 'pizza']
+---
+<style>
+    .place {
+        fill: red;
+    }
+
+    .place-label {
+      font-family: sans-serif;
+      fill: #fff;
+      font-size: 15px;
+      font-weight: 100;
+    }
+</style>
+
+
+<div style="width: 100%;">
+    <div id="ita-map"></div>
+</div>
+
+
+<script>
+var width = document.getElementById('ita-map').offsetWidth,
+    height = 600;
+
+
+var svg = d3.select("#ita-map").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+d3.json("/data/ita.json", function(error, italy) {
+  if (error) return console.error(error);
+
+  var subunits = topojson.feature(italy, italy.objects.ita_subunits);
+
+
+  var projection = d3.geo.albers()
+    .center([14.500, 40.3167])
+    .rotate([0, 0])
+    .parallels([35, 45])
+    .scale(7600)
+    .translate([width / 2, height / 2]);
+
+  var path = d3.geo.path()
+      .projection(projection);
+
+  svg.append("path")
+      .datum(subunits)
+      .attr("d", path);
+
+
+  console.log('places: ', italy.objects.ita_places);
+
+//city circles
+  svg.append("path")
+    .datum(topojson.feature(italy, italy.objects.ita_places))
+    .attr("d", path.pointRadius(4))
+    .attr("class", "place");
+
+//city labels
+  svg.selectAll(".place-label")
+    .data(topojson.feature(italy, italy.objects.ita_places).features)
+  .enter().append("text")
+    .attr("class", "place-label")
+    .attr("transform", function(d) { return "translate(" + projection(d.geometry.coordinates) + ")"; })
+    .attr("dy", ".15em")
+    .attr("dx", ".60em")
+    .text(function(d) { return d.properties.name; });
+
+});
+
+</script>

@@ -1,0 +1,484 @@
+title: Philly
+date: 2016-09-20 8:50:40
+banner: '/images/philly/pano.JPG'
+titleColour: '#fff'
+tags: ['baseball', 'roadtrip', 'philly', 'phillies']
+---
+
+<body>
+  <!--<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="//d3js.org/topojson.v1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>-->
+  
+<!-- <script src="/vendors/jquery/index.js" charset="utf-8"></script>
+<script src="/vendors/d3/d3.min.js" charset="utf-8"></script>
+<script src="/vendors/d3/topojson.v1.min.js" charset="utf-8"></script> -->
+
+  <script src="/vendors/datamaps/datamaps.usa.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/fonts/icon-mlb/style.css">
+  <style>
+    .indicator {
+      border-radius: 50%;
+      height: 12px;
+      width: 12px;
+      display: inline-block;
+      margin: 0 3px;
+    }
+
+    .large {
+      height: 15px;
+      width: 15px;
+    }
+
+    #legend {
+      float: right;
+    }
+
+    #trip-information {
+      float: left;
+      margin: 0 auto;
+    }
+
+    #logo-place {
+      font-size: 64px;
+      margin: -10px 10px;
+      float: left;
+      height: 64px;
+    }
+
+    #text-data {
+      margin: 10px 5px;
+      padding-left: 10px;
+      overflow: none;
+      float: left;
+      border-left: 1px solid #f0f0f0;
+    }
+
+    #park-name {
+      font-size: 16px;
+    }
+
+    #team-name {
+      font-size: 14px;
+      line-height: 3px;
+    }
+
+    #visited {
+      margin-top: 12px;
+      font-size: 12px;
+    }
+
+
+  </style>
+
+
+  <p>
+	Another year, another park. Our Goddard time-honoured tradition of seeing an MLB game at every major league facility has come one check mark closer. Philadelphia was the target this year and one of the few 'drivable' destinations we've yet to see. George's 21st birthday had just passed, and I figured a baseball trip was a fitting gift. Here's where we're at for parks visited:
+  </p>
+
+  <div id="legend">
+    <div class='indicator' style="background-color: green;"></div><span>Visited <strong>(14 + Montreal)</strong></span></br>
+    <div class='indicator' style="background-color: red;"></div><span>Not Visited <strong>(16)</strong></span>
+  </div>
+  <div id="trip-information">
+    <div id="logo-place"></div>
+    <div id="text-data">
+      <div id="park-name"></div>
+      <div id="team-name"></div>
+      <div id="visited"></div>
+    </div>
+  </div>
+  <div id="container1" style="position: relative; width: 100%; height:350px;"></div>
+
+  <p>
+   We watched the sub 500 Miami Marlins take on the bottom feeding Phillies for what promised to be a less than enthusiastic match up. The Phillies got off to an early lead and continued to punish the fish for the remainder of the evening. So much so, George and I decided that after good 7th inning stretch we depart for the bar.
+  </p>
+
+  <p>
+  	The night escalated. Russell, a friend from Seattle now calls Philly home encouraged us to meet him at a nightclub mere blocks from the Liberty Bell. Several rounds of Jägermeister, a bridal party lap dance and a foggy return back to the AirBnB yielded myself separated from George. Then this happened:
+  </p>
+  <img src="/images/philly/key.JPG"/>
+  <p>
+  I could see George's shoes inside and promptly began to pound on the door to no avail. The apartment was on the second floor, and I remembered seeing a fence I could climb up onto the balcony. My arm got barked up by the fence, and my shoes ripped, but I had successfully mounted the balcony. Here I proceeded to rap rhythmically on the patio door with no signs of stirring. I figured it would eventually wake him, but that was when a window at the adjacent apartment shot open and a furious man informed me that he would, "Come the f%$# down there" should my attempts for entry not cease. My attempts for entry ceased. 
+  </p>
+  <p>
+	George has no cell phone, I can't make any noise, and my key is lodged in the front door. Fortunately (I guess you'd call it that) there was a relatively comfortable patio chair, where I spent my final night in Philly. Once I finally woke George not a word was spoken, and we left for Canada in a sleep deprived, disgruntled fashion.
+  </p>
+  <p>
+  Despite the steep denouement to the weekend, we deemed it a success. We'd carried the baseball trip torch, re-connected with a friend, and got a sign for the gazebo. Here's some more from the trip:
+  </p>
+  <div class="slider">
+    <ul>
+        <li><img src="/images/philly/bell.JPG" /></li>
+        <li><img src="/images/philly/citizens.JPG" /></li>
+        <li><img src="/images/philly/hankgeo.JPG" /></li>
+        <li><img src="/images/philly/rusty.JPG" /></li>
+    </ul>
+</div>
+ 
+ <script>
+
+    var teamInit = function() {
+      var data = {
+          park: 'Rogers Centre',
+          team: 'Blue Jays',
+          city: 'Toronto',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 43.64138888888889,
+          longitude: -79.38916666666667,
+          logo: '<span class="mlb-Toronto_Blue_Jays_logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span><span class="path33"></span><span class="path34"></span><span class="path35"></span><span class="path36"></span><span class="path37"></span><span class="path38"></span><span class="path39"></span><span class="path40"></span><span class="path41"></span><span class="path42"></span><span class="path43"></span><span class="path44"></span><span class="path45"></span><span class="path46"></span><span class="path47"></span><span class="path48"></span><span class="path49"></span><span class="path50"></span></span>',
+        }
+        teamFocus(data);
+    }
+
+    var teamFocus = function(data) { 
+      var visited;
+      if(data.fillKey === 'TravelledTo') {
+        visited = '<div class="indicator" style="background-color: green;"></div>' + 'Visited in XXXX';
+      } else if (data.fillKey === 'Highlight') {
+      	visited = '<div class="indicator large" style="background-color: yellow;"></div>' + 'Visited in 2016';
+      } else {
+        visited = '<div class="indicator" style="background-color: red;"></div>' + 'Not yet visited';
+      }
+
+      $( "#logo-place" ).html(data.logo);
+      $( "#team-name" ).html(data.city + ' ' + data.team); 
+      $( "#park-name" ).html(data.park);
+      $( "#visited" ).html(visited);
+    };
+     
+     var baseball = new Datamap({
+      scope: 'usa',
+      element: document.getElementById('container1'),
+      done: teamInit(),
+
+      fills: {
+      'TravelledTo': 'green',
+      'TeamExists' : 'red',
+      defaultFill: '#eaeaea'
+      },
+
+    });
+
+    baseball.bubbles([
+       {
+          park: 'Rogers Centre',
+          city: 'Toronto',
+          team: 'Blue Jays',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 43.64138888888889,
+          longitude: -79.38916666666667,
+          logo: '<span class="mlb-Toronto_Blue_Jays_logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span><span class="path33"></span><span class="path34"></span><span class="path35"></span><span class="path36"></span><span class="path37"></span><span class="path38"></span><span class="path39"></span><span class="path40"></span><span class="path41"></span><span class="path42"></span><span class="path43"></span><span class="path44"></span><span class="path45"></span><span class="path46"></span><span class="path47"></span><span class="path48"></span><span class="path49"></span><span class="path50"></span></span>',
+        },
+        {
+          park: 'Petco Park',
+          team: 'Padres',
+          city: 'San Diego',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 32.7150,
+          longitude: -117.1625,
+          logo: '<span class="mlb-San_Diego_Padres_logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span></span>',
+        },
+        {
+          park: 'Angel Stadium',
+          team: 'Angels',
+          city: 'Los Angeles',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 33.80027777777777,
+          longitude: -117.88277777777778,
+          logo: '<span class="mlb-Los_Angeles_Angels_of_Anaheim"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span></span>'
+        },
+        {
+          park: 'Dodger Stadium',
+          team: 'Dodgers',
+          city: 'Los Angeles',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 34.0736,
+          longitude: -118.2400,
+          logo: '<div style="text-align: center; font-size:64px;"><span class="mlb-Los_Angeles_Dodgers_Logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span></span></div>',
+        },
+        {
+          park: 'Oakland-Alameda County Coliseum',
+          team: 'Athletics',
+          city: 'Oakland',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 37.7517,
+          longitude: -122.2006,
+          logo: '<span class="mlb-Oakland_athl_primlogo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span></span>'
+        },
+        {
+          park: 'AT&T Park',
+          team: 'Giants',
+          city: 'San Francisco',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 37.945277777777775,
+          longitude: -122.38916666666667,
+          logo: '<span class="mlb-San_Francisco_Giants_Logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span><span class="path33"></span><span class="path34"></span><span class="path35"></span><span class="path36"></span><span class="path37"></span><span class="path38"></span><span class="path39"></span><span class="path40"></span><span class="path41"></span><span class="path42"></span><span class="path43"></span><span class="path44"></span><span class="path45"></span><span class="path46"></span><span class="path47"></span><span class="path48"></span><span class="path49"></span><span class="path50"></span><span class="path51"></span><span class="path52"></span><span class="path53"></span><span class="path54"></span><span class="path55"></span><span class="path56"></span><span class="path57"></span><span class="path58"></span><span class="path59"></span><span class="path60"></span><span class="path61"></span><span class="path62"></span><span class="path63"></span><span class="path64"></span><span class="path65"></span><span class="path66"></span><span class="path67"></span><span class="path68"></span><span class="path69"></span><span class="path70"></span><span class="path71"></span><span class="path72"></span><span class="path73"></span><span class="path74"></span><span class="path75"></span><span class="path76"></span><span class="path77"></span><span class="path78"></span><span class="path79"></span><span class="path80"></span><span class="path81"></span><span class="path82"></span><span class="path83"></span><span class="path84"></span><span class="path85"></span><span class="path86"></span><span class="path87"></span><span class="path88"></span><span class="path89"></span><span class="path90"></span><span class="path91"></span><span class="path92"></span><span class="path93"></span><span class="path94"></span><span class="path95"></span><span class="path96"></span><span class="path97"></span><span class="path98"></span><span class="path99"></span><span class="path100"></span><span class="path101"></span><span class="path102"></span><span class="path103"></span><span class="path104"></span><span class="path105"></span><span class="path106"></span><span class="path107"></span><span class="path108"></span><span class="path109"></span><span class="path110"></span><span class="path111"></span><span class="path112"></span><span class="path113"></span><span class="path114"></span><span class="path115"></span><span class="path116"></span><span class="path117"></span><span class="path118"></span><span class="path119"></span><span class="path120"></span><span class="path121"></span><span class="path122"></span><span class="path123"></span><span class="path124"></span><span class="path125"></span><span class="path126"></span><span class="path127"></span><span class="path128"></span><span class="path129"></span><span class="path130"></span><span class="path131"></span><span class="path132"></span><span class="path133"></span><span class="path134"></span><span class="path135"></span><span class="path136"></span><span class="path137"></span><span class="path138"></span><span class="path139"></span><span class="path140"></span><span class="path141"></span><span class="path142"></span><span class="path143"></span><span class="path144"></span><span class="path145"></span><span class="path146"></span><span class="path147"></span><span class="path148"></span><span class="path149"></span><span class="path150"></span><span class="path151"></span><span class="path152"></span><span class="path153"></span><span class="path154"></span><span class="path155"></span><span class="path156"></span><span class="path157"></span><span class="path158"></span><span class="path159"></span><span class="path160"></span><span class="path161"></span><span class="path162"></span><span class="path163"></span><span class="path164"></span><span class="path165"></span><span class="path166"></span><span class="path167"></span><span class="path168"></span><span class="path169"></span><span class="path170"></span><span class="path171"></span><span class="path172"></span><span class="path173"></span><span class="path174"></span><span class="path175"></span><span class="path176"></span><span class="path177"></span><span class="path178"></span><span class="path179"></span><span class="path180"></span><span class="path181"></span><span class="path182"></span><span class="path183"></span><span class="path184"></span><span class="path185"></span><span class="path186"></span><span class="path187"></span><span class="path188"></span><span class="path189"></span><span class="path190"></span><span class="path191"></span><span class="path192"></span><span class="path193"></span><span class="path194"></span><span class="path195"></span><span class="path196"></span><span class="path197"></span><span class="path198"></span><span class="path199"></span><span class="path200"></span><span class="path201"></span><span class="path202"></span><span class="path203"></span><span class="path204"></span><span class="path205"></span><span class="path206"></span><span class="path207"></span><span class="path208"></span><span class="path209"></span><span class="path210"></span><span class="path211"></span><span class="path212"></span><span class="path213"></span><span class="path214"></span><span class="path215"></span><span class="path216"></span><span class="path217"></span><span class="path218"></span><span class="path219"></span><span class="path220"></span><span class="path221"></span><span class="path222"></span><span class="path223"></span><span class="path224"></span><span class="path225"></span><span class="path226"></span><span class="path227"></span><span class="path228"></span><span class="path229"></span><span class="path230"></span><span class="path231"></span><span class="path232"></span><span class="path233"></span><span class="path234"></span><span class="path235"></span><span class="path236"></span><span class="path237"></span><span class="path238"></span><span class="path239"></span><span class="path240"></span><span class="path241"></span><span class="path242"></span><span class="path243"></span><span class="path244"></span><span class="path245"></span><span class="path246"></span><span class="path247"></span><span class="path248"></span><span class="path249"></span><span class="path250"></span><span class="path251"></span><span class="path252"></span><span class="path253"></span><span class="path254"></span><span class="path255"></span><span class="path256"></span><span class="path257"></span><span class="path258"></span><span class="path259"></span><span class="path260"></span><span class="path261"></span><span class="path262"></span><span class="path263"></span><span class="path264"></span><span class="path265"></span><span class="path266"></span><span class="path267"></span><span class="path268"></span><span class="path269"></span><span class="path270"></span><span class="path271"></span><span class="path272"></span><span class="path273"></span><span class="path274"></span><span class="path275"></span><span class="path276"></span><span class="path277"></span><span class="path278"></span><span class="path279"></span><span class="path280"></span><span class="path281"></span><span class="path282"></span><span class="path283"></span><span class="path284"></span><span class="path285"></span><span class="path286"></span><span class="path287"></span><span class="path288"></span><span class="path289"></span><span class="path290"></span><span class="path291"></span><span class="path292"></span><span class="path293"></span><span class="path294"></span><span class="path295"></span><span class="path296"></span><span class="path297"></span><span class="path298"></span><span class="path299"></span><span class="path300"></span><span class="path301"></span><span class="path302"></span><span class="path303"></span><span class="path304"></span><span class="path305"></span><span class="path306"></span><span class="path307"></span><span class="path308"></span><span class="path309"></span><span class="path310"></span><span class="path311"></span><span class="path312"></span><span class="path313"></span><span class="path314"></span><span class="path315"></span><span class="path316"></span><span class="path317"></span><span class="path318"></span><span class="path319"></span><span class="path320"></span><span class="path321"></span><span class="path322"></span><span class="path323"></span><span class="path324"></span><span class="path325"></span><span class="path326"></span><span class="path327"></span><span class="path328"></span><span class="path329"></span><span class="path330"></span><span class="path331"></span><span class="path332"></span><span class="path333"></span><span class="path334"></span><span class="path335"></span><span class="path336"></span><span class="path337"></span><span class="path338"></span><span class="path339"></span><span class="path340"></span><span class="path341"></span><span class="path342"></span><span class="path343"></span><span class="path344"></span><span class="path345"></span><span class="path346"></span><span class="path347"></span><span class="path348"></span><span class="path349"></span><span class="path350"></span><span class="path351"></span><span class="path352"></span><span class="path353"></span><span class="path354"></span><span class="path355"></span><span class="path356"></span><span class="path357"></span><span class="path358"></span><span class="path359"></span><span class="path360"></span><span class="path361"></span><span class="path362"></span><span class="path363"></span><span class="path364"></span><span class="path365"></span><span class="path366"></span><span class="path367"></span><span class="path368"></span><span class="path369"></span><span class="path370"></span><span class="path371"></span><span class="path372"></span><span class="path373"></span><span class="path374"></span><span class="path375"></span><span class="path376"></span><span class="path377"></span><span class="path378"></span><span class="path379"></span><span class="path380"></span><span class="path381"></span><span class="path382"></span><span class="path383"></span><span class="path384"></span><span class="path385"></span><span class="path386"></span><span class="path387"></span><span class="path388"></span><span class="path389"></span><span class="path390"></span><span class="path391"></span><span class="path392"></span><span class="path393"></span><span class="path394"></span><span class="path395"></span><span class="path396"></span><span class="path397"></span><span class="path398"></span><span class="path399"></span><span class="path400"></span><span class="path401"></span><span class="path402"></span><span class="path403"></span><span class="path404"></span><span class="path405"></span><span class="path406"></span><span class="path407"></span><span class="path408"></span><span class="path409"></span><span class="path410"></span><span class="path411"></span><span class="path412"></span><span class="path413"></span><span class="path414"></span><span class="path415"></span><span class="path416"></span><span class="path417"></span><span class="path418"></span><span class="path419"></span><span class="path420"></span><span class="path421"></span><span class="path422"></span><span class="path423"></span><span class="path424"></span><span class="path425"></span><span class="path426"></span><span class="path427"></span><span class="path428"></span><span class="path429"></span><span class="path430"></span><span class="path431"></span><span class="path432"></span><span class="path433"></span><span class="path434"></span><span class="path435"></span><span class="path436"></span><span class="path437"></span><span class="path438"></span><span class="path439"></span><span class="path440"></span><span class="path441"></span></span>'
+        },
+        {
+          park: 'Tropicana Field',
+          team: 'Rays',
+          city: 'Tampa Bay',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 27.7683,
+          longitude: -82.6533,
+          logo: '<span class="mlb-Tampa_Bay_Rays"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span><span class="path33"></span><span class="path34"></span><span class="path35"></span><span class="path36"></span><span class="path37"></span><span class="path38"></span><span class="path39"></span><span class="path40"></span><span class="path41"></span><span class="path42"></span><span class="path43"></span><span class="path44"></span><span class="path45"></span><span class="path46"></span><span class="path47"></span><span class="path48"></span><span class="path49"></span><span class="path50"></span><span class="path51"></span><span class="path52"></span><span class="path53"></span><span class="path54"></span><span class="path55"></span><span class="path56"></span><span class="path57"></span><span class="path58"></span><span class="path59"></span><span class="path60"></span><span class="path61"></span><span class="path62"></span><span class="path63"></span><span class="path64"></span><span class="path65"></span><span class="path66"></span><span class="path67"></span><span class="path68"></span><span class="path69"></span><span class="path70"></span><span class="path71"></span><span class="path72"></span><span class="path73"></span><span class="path74"></span><span class="path75"></span><span class="path76"></span><span class="path77"></span><span class="path78"></span><span class="path79"></span><span class="path80"></span><span class="path81"></span><span class="path82"></span><span class="path83"></span><span class="path84"></span><span class="path85"></span><span class="path86"></span><span class="path87"></span><span class="path88"></span><span class="path89"></span><span class="path90"></span><span class="path91"></span><span class="path92"></span><span class="path93"></span><span class="path94"></span><span class="path95"></span><span class="path96"></span><span class="path97"></span><span class="path98"></span><span class="path99"></span><span class="path100"></span><span class="path101"></span><span class="path102"></span><span class="path103"></span><span class="path104"></span><span class="path105"></span><span class="path106"></span><span class="path107"></span><span class="path108"></span><span class="path109"></span><span class="path110"></span><span class="path111"></span><span class="path112"></span><span class="path113"></span><span class="path114"></span><span class="path115"></span><span class="path116"></span><span class="path117"></span><span class="path118"></span><span class="path119"></span><span class="path120"></span><span class="path121"></span><span class="path122"></span><span class="path123"></span><span class="path124"></span><span class="path125"></span><span class="path126"></span><span class="path127"></span><span class="path128"></span><span class="path129"></span><span class="path130"></span><span class="path131"></span><span class="path132"></span><span class="path133"></span><span class="path134"></span><span class="path135"></span><span class="path136"></span><span class="path137"></span><span class="path138"></span><span class="path139"></span><span class="path140"></span><span class="path141"></span><span class="path142"></span><span class="path143"></span><span class="path144"></span><span class="path145"></span><span class="path146"></span><span class="path147"></span><span class="path148"></span><span class="path149"></span><span class="path150"></span><span class="path151"></span><span class="path152"></span><span class="path153"></span><span class="path154"></span><span class="path155"></span><span class="path156"></span><span class="path157"></span><span class="path158"></span><span class="path159"></span><span class="path160"></span><span class="path161"></span><span class="path162"></span><span class="path163"></span><span class="path164"></span><span class="path165"></span><span class="path166"></span><span class="path167"></span><span class="path168"></span><span class="path169"></span></span>'
+        },
+        {
+          park: 'Marlins Park',
+          team: 'Marlins',
+          city: 'Miami',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 25.7781,
+          longitude: -80.2197,
+          logo: '<span class="mlb-MiamiMarlins"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span></span>'
+        },        
+        {
+          park: 'U.S. Cellular Field',
+          team: 'White Sox',
+          city: 'Chicago',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 41.8300,
+          longitude: -87.6339,
+          logo: '<span class="mlb-Chicago_White_Sox"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>'
+        },
+        {
+          park: 'Wrigley Field',
+          team: 'Cubs',
+          city: 'Chicago',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 41.94833333333333,
+          longitude: -87.65555555555557,
+          logo: '<span class="mlb-Chicago_Cubs_Logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span></span>'
+        },
+        {
+          park: 'Nationals Park',
+          team: 'Nationals',
+          city: 'Washington',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 38.8728,
+          longitude: -77.0075,
+          logo: '<span class="mlb-Washington-Nationals-Logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span><span class="path33"></span><span class="path34"></span><span class="path35"></span><span class="path36"></span><span class="path37"></span><span class="path38"></span><span class="path39"></span><span class="path40"></span><span class="path41"></span><span class="path42"></span><span class="path43"></span><span class="path44"></span><span class="path45"></span><span class="path46"></span><span class="path47"></span><span class="path48"></span><span class="path49"></span><span class="path50"></span><span class="path51"></span><span class="path52"></span><span class="path53"></span><span class="path54"></span><span class="path55"></span><span class="path56"></span><span class="path57"></span><span class="path58"></span><span class="path59"></span><span class="path60"></span><span class="path61"></span><span class="path62"></span><span class="path63"></span><span class="path64"></span><span class="path65"></span><span class="path66"></span><span class="path67"></span><span class="path68"></span><span class="path69"></span><span class="path70"></span><span class="path71"></span><span class="path72"></span><span class="path73"></span><span class="path74"></span><span class="path75"></span><span class="path76"></span><span class="path77"></span><span class="path78"></span><span class="path79"></span><span class="path80"></span><span class="path81"></span><span class="path82"></span><span class="path83"></span><span class="path84"></span><span class="path85"></span><span class="path86"></span><span class="path87"></span><span class="path88"></span><span class="path89"></span><span class="path90"></span><span class="path91"></span><span class="path92"></span><span class="path93"></span><span class="path94"></span><span class="path95"></span></span>'
+        },
+        {
+          park: 'Oriole Park',
+          team: 'Orioles',
+          city: 'Baltimore',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 39.2839,
+          longitude: -76.6217,
+          logo: '<span class="mlb-Baltimore_Orioles_Logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span><span class="path33"></span><span class="path34"></span><span class="path35"></span><span class="path36"></span><span class="path37"></span><span class="path38"></span><span class="path39"></span><span class="path40"></span><span class="path41"></span><span class="path42"></span><span class="path43"></span><span class="path44"></span><span class="path45"></span><span class="path46"></span><span class="path47"></span></span>'
+        },      
+        {
+          park: 'Fenway Park',
+          team: 'Red Sox',
+          city: 'Boston',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 42.3464,
+          longitude: -71.0975,
+          logo: '<span class="mlb-RedSoxPrimary_HangingSocks"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>'
+        },      
+        {
+          park: 'Comerica Park',
+          team: 'Tigers',
+          city: 'Detroit',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 42.3392,
+          longitude: -83.0486,
+          logo: '<span class="mlb-Detroit_tigers_textlogo"></span>'
+        },      
+        {
+          park: 'Busch Stadium',
+          team: 'Cardinals',
+          city: 'St. Louis',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 38.6225,
+          longitude: -90.1931,
+          logo: '<span class="mlb-St_Louis_Cardinals_Logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span></span>'
+        },
+        {
+          park: 'Yankee Stadium',
+          team: 'Yankees',
+          city: 'New York',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 40.8292,
+          longitude: -73.9264,
+          logo: '<span class="mlb-NewYorkYankees_PrimaryLogo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span></span>'
+        },
+        {
+          park: 'Citi Field',
+          team: 'Mets',
+          city: 'New York',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 40.7569,
+          longitude: -73.8458,
+          logo: '<span class="mlb-New_York_Mets"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span><span class="path33"></span><span class="path34"></span><span class="path35"></span><span class="path36"></span><span class="path37"></span><span class="path38"></span><span class="path39"></span><span class="path40"></span><span class="path41"></span><span class="path42"></span><span class="path43"></span><span class="path44"></span><span class="path45"></span><span class="path46"></span><span class="path47"></span><span class="path48"></span><span class="path49"></span><span class="path50"></span><span class="path51"></span><span class="path52"></span><span class="path53"></span><span class="path54"></span><span class="path55"></span><span class="path56"></span><span class="path57"></span><span class="path58"></span><span class="path59"></span><span class="path60"></span><span class="path61"></span><span class="path62"></span><span class="path63"></span><span class="path64"></span><span class="path65"></span><span class="path66"></span><span class="path67"></span><span class="path68"></span></span>'
+        },      
+        {
+          park: 'Progressive Field',
+          team: 'Indians',
+          city: 'Cleveland',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 41.4958,
+          longitude: -81.6853,
+          logo: '<span class="mlb-Cleveland_Indians_logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span></span>'
+        },
+        {
+          park: 'Great American Ball Park',
+          team: 'Reds',
+          city: 'Cincinnati',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 39.097500000000004,
+          longitude: -84.50666666666666,
+          logo: '<span class="mlb-Cincinnati_Reds_Logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span></span>'
+        },      
+        {
+          park: 'PNC Park',
+          team: 'Pirates',
+          city: 'Pittsburgh',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 40.4469,
+          longitude: -80.0058,
+          logo: '<span class="mlb-Pittsburgh_Pirates_MLB_Logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span><span class="path33"></span><span class="path34"></span><span class="path35"></span><span class="path36"></span><span class="path37"></span><span class="path38"></span><span class="path39"></span></span>'
+        },
+        {
+          park: 'Citizens Bank Park',
+          team: 'Phillies',
+          city: 'Philadelphia',
+          fillKey: 'TravelledTo',
+          radius: 10,
+          latitude: 39.9058,
+          longitude: -75.1664,
+          logo: '<span class="mlb-Philadelphia_Phillies"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span></span>'
+        },      
+        {
+          park: 'Safeco Field',
+          team: 'Mariners',
+          city: 'Seattle',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 47.5914,
+          longitude: -122.3325,
+          logo: '<span class="mlb-Seattle_Mariners_logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span><span class="path33"></span><span class="path34"></span><span class="path35"></span><span class="path36"></span><span class="path37"></span><span class="path38"></span><span class="path39"></span><span class="path40"></span><span class="path41"></span><span class="path42"></span><span class="path43"></span><span class="path44"></span><span class="path45"></span><span class="path46"></span><span class="path47"></span><span class="path48"></span><span class="path49"></span><span class="path50"></span><span class="path51"></span><span class="path52"></span><span class="path53"></span><span class="path54"></span><span class="path55"></span><span class="path56"></span><span class="path57"></span><span class="path58"></span><span class="path59"></span><span class="path60"></span><span class="path61"></span><span class="path62"></span><span class="path63"></span><span class="path64"></span><span class="path65"></span><span class="path66"></span><span class="path67"></span><span class="path68"></span><span class="path69"></span><span class="path70"></span><span class="path71"></span><span class="path72"></span><span class="path73"></span><span class="path74"></span><span class="path75"></span><span class="path76"></span><span class="path77"></span><span class="path78"></span><span class="path79"></span><span class="path80"></span><span class="path81"></span><span class="path82"></span><span class="path83"></span><span class="path84"></span><span class="path85"></span><span class="path86"></span><span class="path87"></span><span class="path88"></span><span class="path89"></span><span class="path90"></span><span class="path91"></span><span class="path92"></span><span class="path93"></span><span class="path94"></span><span class="path95"></span><span class="path96"></span><span class="path97"></span><span class="path98"></span><span class="path99"></span></span>'
+        },      
+        {
+          park: 'Chase Field',
+          team: 'Diamondbacks',
+          city: 'Arizona',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 33.4453,
+          longitude: -112.0669,
+          logo: '<span class="mlb-Arizona_Diamondbacks_Logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span></span>'
+        },      
+        {
+          park: 'Coors Field',
+          team: 'Rockies',
+          city: 'Colorado',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 39.75611111111111,
+          longitude: -104.99416666666667,
+          logo: '<span class="mlb-Colorado_Rockies_logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span><span class="path33"></span><span class="path34"></span><span class="path35"></span><span class="path36"></span><span class="path37"></span><span class="path38"></span><span class="path39"></span><span class="path40"></span><span class="path41"></span><span class="path42"></span><span class="path43"></span><span class="path44"></span></span>'
+        },
+        {
+          park: 'Globe Life Park',
+          team: 'Rangers',
+          city: 'Texas',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 32.75138888888889,
+          longitude: -97.08277777777778,
+          logo: '<span class="mlb-Texas_Rangers"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span><span class="path33"></span><span class="path34"></span><span class="path35"></span><span class="path36"></span><span class="path37"></span><span class="path38"></span><span class="path39"></span><span class="path40"></span><span class="path41"></span><span class="path42"></span><span class="path43"></span><span class="path44"></span><span class="path45"></span><span class="path46"></span><span class="path47"></span><span class="path48"></span><span class="path49"></span><span class="path50"></span><span class="path51"></span><span class="path52"></span><span class="path53"></span><span class="path54"></span><span class="path55"></span><span class="path56"></span><span class="path57"></span><span class="path58"></span><span class="path59"></span><span class="path60"></span><span class="path61"></span><span class="path62"></span><span class="path63"></span><span class="path64"></span><span class="path65"></span></span>'
+        },
+              {
+          park: 'Minute Maid Park',
+          team: 'Astros',
+          city: 'Houston',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 29.7569,
+          longitude: -95.3556,
+          logo: '<span class="mlb-Houston_Astros_Logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span></span>'
+        },
+        {
+          park: 'Kauffman Stadium',
+          team: 'Royals',
+          city: 'Kansas City',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 39.0514,
+          longitude: -94.4806,
+          logo: '<span class="mlb-Kansas_City_Royals"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span></span>'
+        },      
+        {
+          park: 'Turner Field',
+          team: 'Braves',
+          city: 'Atlanta',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 33.7353,
+          longitude: -84.3894,
+          logo: '<span class="mlb-Atlanta_Braves"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span></span>'
+        },
+        {
+          park: 'Miller Park',
+          team: 'Brewers',
+          city: 'Milwaukee',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 43.0283,
+          longitude: -87.9711,
+          logo: '<span class="mlb-Milwaukee_Brewers_Logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span><span class="path33"></span><span class="path34"></span><span class="path35"></span><span class="path36"></span><span class="path37"></span><span class="path38"></span><span class="path39"></span><span class="path40"></span><span class="path41"></span><span class="path42"></span><span class="path43"></span><span class="path44"></span><span class="path45"></span><span class="path46"></span><span class="path47"></span><span class="path48"></span><span class="path49"></span><span class="path50"></span><span class="path51"></span><span class="path52"></span><span class="path53"></span><span class="path54"></span><span class="path55"></span><span class="path56"></span><span class="path57"></span><span class="path58"></span><span class="path59"></span><span class="path60"></span><span class="path61"></span><span class="path62"></span><span class="path63"></span><span class="path64"></span><span class="path65"></span><span class="path66"></span><span class="path67"></span><span class="path68"></span><span class="path69"></span><span class="path70"></span><span class="path71"></span><span class="path72"></span><span class="path73"></span><span class="path74"></span><span class="path75"></span><span class="path76"></span><span class="path77"></span><span class="path78"></span><span class="path79"></span><span class="path80"></span><span class="path81"></span><span class="path82"></span><span class="path83"></span><span class="path84"></span><span class="path85"></span><span class="path86"></span><span class="path87"></span><span class="path88"></span><span class="path89"></span><span class="path90"></span><span class="path91"></span><span class="path92"></span><span class="path93"></span><span class="path94"></span><span class="path95"></span><span class="path96"></span><span class="path97"></span><span class="path98"></span><span class="path99"></span><span class="path100"></span><span class="path101"></span><span class="path102"></span><span class="path103"></span><span class="path104"></span><span class="path105"></span><span class="path106"></span><span class="path107"></span><span class="path108"></span><span class="path109"></span><span class="path110"></span><span class="path111"></span><span class="path112"></span><span class="path113"></span><span class="path114"></span><span class="path115"></span><span class="path116"></span><span class="path117"></span><span class="path118"></span><span class="path119"></span></span>'
+        },      
+        {
+          park: 'Target Field',
+          team: 'Twins',
+          city: 'Minnesota',
+          fillKey: 'TeamExists',
+          radius: 8,
+          latitude: 44.98166666666667,
+          longitude: -93.27833333333334,
+          logo: '<span class="mlb-Minnesota_Twins_Logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span><span class="path33"></span><span class="path34"></span><span class="path35"></span><span class="path36"></span><span class="path37"></span><span class="path38"></span><span class="path39"></span><span class="path40"></span><span class="path41"></span><span class="path42"></span><span class="path43"></span><span class="path44"></span><span class="path45"></span><span class="path46"></span><span class="path47"></span><span class="path48"></span><span class="path49"></span><span class="path50"></span><span class="path51"></span><span class="path52"></span><span class="path53"></span><span class="path54"></span><span class="path55"></span><span class="path56"></span><span class="path57"></span><span class="path58"></span><span class="path59"></span><span class="path60"></span><span class="path61"></span><span class="path62"></span><span class="path63"></span><span class="path64"></span><span class="path65"></span><span class="path66"></span><span class="path67"></span><span class="path68"></span><span class="path69"></span><span class="path70"></span><span class="path71"></span><span class="path72"></span><span class="path73"></span><span class="path74"></span><span class="path75"></span><span class="path76"></span><span class="path77"></span><span class="path78"></span><span class="path79"></span><span class="path80"></span><span class="path81"></span><span class="path82"></span><span class="path83"></span><span class="path84"></span><span class="path85"></span><span class="path86"></span><span class="path87"></span><span class="path88"></span><span class="path89"></span><span class="path90"></span><span class="path91"></span><span class="path92"></span><span class="path93"></span><span class="path94"></span><span class="path95"></span><span class="path96"></span><span class="path97"></span><span class="path98"></span><span class="path99"></span><span class="path100"></span><span class="path101"></span><span class="path102"></span><span class="path103"></span><span class="path104"></span><span class="path105"></span><span class="path106"></span><span class="path107"></span><span class="path108"></span><span class="path109"></span><span class="path110"></span><span class="path111"></span><span class="path112"></span><span class="path113"></span><span class="path114"></span></span>'
+        },
+        {
+          park: 'Olympic Stadium',
+          team: 'Expos',
+          city: 'Montreal',
+          fillKey: 'TravelledTo',
+          radius: 8,
+          latitude: 45.5580,
+          longitude: -73.5520,
+          logo: '<span class="mlb-Montreal_Expos_Logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span></span>'
+        },
+
+      ], {
+      popupTemplate: function(geo, data) {
+        teamFocus(data);
+        return '<div class="hoverinfo"> Park: ' + data.park + '</br> Team: ' + data.team + '</br>' + data.logo
+      }
+    });
+    baseball.labels();
+  </script>
+</body>

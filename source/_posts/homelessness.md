@@ -1,6 +1,6 @@
 title: 'Homelessness'
 date: 2016-09-05 23:03:17
-banner: '/images/carrefour.jpg'
+banner: '/images/apartment-hunting.png'
 titleColour: '#FFF'
 tags: ['rent', 'toronto']
 ---
