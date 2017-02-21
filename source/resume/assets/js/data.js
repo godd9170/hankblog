@@ -1,3 +1,17 @@
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+
+var yyyy = today.getFullYear();
+if(dd<10){
+    dd='0'+dd;
+} 
+if(mm<10){
+    mm='0'+mm;
+} 
+var today = yyyy+'-'+mm+'-'+dd;
+
+
 var resumeData = {
     "timelineData" : [
       { 
@@ -40,11 +54,33 @@ var resumeData = {
         elem: "#beagle"
       },
       {
-        name:"<div class='lead-up'>Graduating </div><div>Wilfrid Laurier Universityv", 
+        name:"<div class='lead-up'>Graduating </div><div>Wilfrid Laurier University</div>", 
         date:  "2016-04-01", 
         elem: "#wlu"
+      },
+      {
+        name:"<div class='lead-up'>Began Working at </div><div>Saasli</div>", 
+        date:  "2016-04-16", 
+        elem: "#saasli"
+      },
+      {
+        name:"<div class='lead-up'>Presently Working at </div><div>Saasli</div>", 
+        date:  today, 
+        elem: "#saasli"
       }
     ],
+    "saasliData" : {
+      "cols": [
+            {"id":"","label":"Duty","pattern":"","type":"string"},
+            {"id":"","label":"Percentage","pattern":"","type":"number"}
+          ],
+      "rows": [
+            {"c":[{"v":"Systems Integrations","f":null},{"v":45,"f":null}]},
+            {"c":[{"v":"Back-End API Development","f":null},{"v":5,"f":null}]},
+            {"c":[{"v":"Support","f":null},{"v":15,"f":null}]},
+            {"c":[{"v":"Customer Success","f":null},{"v":35,"f":null}]}
+          ]
+    },
     "beagleData" : {
       "cols": [
             {"id":"","label":"Duty","pattern":"","type":"string"},

@@ -185,6 +185,11 @@ function drawCharts() {
 // EXPERIENCE
 //
 
+  //Saasli Duties
+  var saasliData = new google.visualization.DataTable(resumeData['saasliData']);
+  var saasliChart = new google.visualization.PieChart(document.getElementById('saasli-duties'));
+  saasliChart.draw(saasliData, experienceOptions);
+
   //Beagle Duties
   var beagleData = new google.visualization.DataTable(resumeData['beagleData']);
   var beagleChart = new google.visualization.PieChart(document.getElementById('beagle-duties'));
