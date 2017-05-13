@@ -183,6 +183,11 @@ function drawCharts() {
 // EXPERIENCE
 //
 
+  //Shakespeate Duties
+  var shakespeareData = new google.visualization.DataTable(resumeData['shakespeareData']);
+  var shakespeareChart = new google.visualization.PieChart(document.getElementById('shakespeare-duties'));
+  shakespeareChart.draw(shakespeareData, experienceOptions);
+
   //Saasli Duties
   var saasliData = new google.visualization.DataTable(resumeData['saasliData']);
   var saasliChart = new google.visualization.PieChart(document.getElementById('saasli-duties'));
@@ -204,9 +209,9 @@ function drawCharts() {
   d2lChart.draw(d2lData, experienceOptions);
 
   //Electrolab Duties
-  var electrolabData = new google.visualization.DataTable(resumeData['electrolabData']);
-  var electrolabChart = new google.visualization.PieChart(document.getElementById('electrolab-duties'));
-  electrolabChart.draw(electrolabData, experienceOptions);
+  // var electrolabData = new google.visualization.DataTable(resumeData['electrolabData']);
+  // var electrolabChart = new google.visualization.PieChart(document.getElementById('electrolab-duties'));
+  // electrolabChart.draw(electrolabData, experienceOptions);
 }
 
 

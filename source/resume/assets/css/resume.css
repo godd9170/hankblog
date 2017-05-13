@@ -64,7 +64,7 @@
       margin-top: -10px;
       color: #444; }
     .resume .row .cell .cell-header .workplace-title {
-      font-size: 0.8em;
+      font-size: 1em;
       margin-top: -10px;
       color: #444; }
   .resume .row .cell .cell-body .description {
@@ -79,7 +79,9 @@
       .resume .row .cell .cell-body .chart .duties-title-container .duties-title {
         border-bottom: 1px solid #444; }
     .resume .row .cell .cell-body .chart .duties-footer {
-      font-size: 0.6em; }
+      text-align: center;
+      font-size: 0.8em;
+      color: #a0a0a0; }
   .resume .row .cell .cell-body .skill-scale {
     display: flex;
     width: 70%;
@@ -94,8 +96,13 @@
   .resume .row .cell .cell-body .other-software {
     width: 100%;
     padding-top: 10px; }
+    .resume .row .cell .cell-body .other-software .Grid-cell {
+      height: 2em; }
     .resume .row .cell .cell-body .other-software i {
       font-size: 1.5em; }
+      .resume .row .cell .cell-body .other-software i:hover {
+        cursor: pointer;
+        font-size: 1.7em; }
     .resume .row .cell .cell-body .other-software .resume-icon-ps:hover {
       color: #00A4E4; }
     .resume .row .cell .cell-body .other-software .resume-icon-id:hover {
@@ -118,8 +125,42 @@
       color: #b3b3b3; }
     .resume .row .cell .cell-body .other-software .resume-icon-linux:hover {
       color: #000; }
-    .resume .row .cell .cell-body .other-software:hover {
-      cursor: pointer; }
+    .resume .row .cell .cell-body .other-software .resume-icon-django:hover {
+      color: #0C3C26; }
+    .resume .row .cell .cell-body .other-software .resume-icon-python:hover {
+      color: #3776AB; }
+    .resume .row .cell .cell-body .other-software .resume-icon-html:hover {
+      color: #E54B26; }
+    .resume .row .cell .cell-body .other-software .resume-icon-javascript:hover {
+      color: #F7DF1E; }
+    .resume .row .cell .cell-body .other-software .resume-icon-mssql:hover {
+      color: #EA2729; }
+    .resume .row .cell .cell-body .other-software .resume-icon-postgres:hover {
+      color: #336791; }
+    .resume .row .cell .cell-body .other-software .resume-icon-mysql-alt:hover {
+      color: #00758F; }
+    .resume .row .cell .cell-body .other-software .resume-icon-jquery:hover {
+      color: #0868AB; }
+    .resume .row .cell .cell-body .other-software .resume-icon-reactjs:hover {
+      color: #00D8FF; }
+    .resume .row .cell .cell-body .other-software .resume-icon-redux:hover {
+      color: #8B66C5; }
+    .resume .row .cell .cell-body .other-software .resume-icon-css:hover {
+      color: #2062AF; }
+    .resume .row .cell .cell-body .other-software .resume-icon-salesforce:hover {
+      color: #00A1E0; }
+    .resume .row .cell .cell-body .other-software .resume-icon-centos:hover {
+      color: #1565AF; }
+    .resume .row .cell .cell-body .other-software .resume-icon-nodejs:hover {
+      color: #8CC84B; }
+    .resume .row .cell .cell-body .other-software .resume-icon-heroku:hover {
+      color: #430098; }
+    .resume .row .cell .cell-body .other-software .resume-icon-aws:hover {
+      color: #F68D11; }
+    .resume .row .cell .cell-body .other-software .resume-icon-circleci:hover {
+      color: #0E4C64; }
+    .resume .row .cell .cell-body .other-software .resume-icon-git:hover {
+      color: #F05033; }
   .resume .row .cell .cell-body .other-software-chart {
     width: 100%; }
     .resume .row .cell .cell-body .other-software-chart #other-software-bar {
@@ -162,5 +203,45 @@
         /* Chrome, Safari, Opera */
         filter: grayscale(0%);
         opacity: 1; }
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10000; }
+  #overlay .overlay-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column; }
+    #overlay .overlay-content .skill-icon-container {
+      font-size: 5em;
+      color: #fff; }
+    #overlay .overlay-content .skill-title {
+      font-size: 1.2em;
+      color: #fff; }
+    #overlay .overlay-content #supp-links {
+      color: rgba(255, 255, 255, 0.8);
+      cursor: pointer; }
+    #overlay .overlay-content .skill-description-container {
+      flex: 1;
+      width: 100%;
+      justify-content: center;
+      display: flex; }
+      #overlay .overlay-content .skill-description-container iframe {
+        width: 50%;
+        background-image: url(../img/spinner.svg);
+        background-repeat: no-repeat;
+        background-position: center top; }
+  #overlay #close-overlay {
+    cursor: pointer;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    color: #fff; }
 
 /*# sourceMappingURL=resume.css.map */

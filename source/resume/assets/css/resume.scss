@@ -89,7 +89,7 @@
           color: #444;
         }
         .workplace-title {
-          font-size: 0.8em;
+          font-size: 1em;
           margin-top: -10px;
           color: #444;
         }
@@ -113,7 +113,9 @@
             }
           }
           .duties-footer {
-            font-size: 0.6em;
+            text-align: center;
+            font-size: 0.8em;
+            color: #a0a0a0;
           }
         }
 
@@ -137,7 +139,15 @@
           width: 100%;
           padding-top: 10px;
 
-          i { font-size: 1.5em;}
+          .Grid-cell {
+            height: 2em;
+          }
+
+          i { 
+            font-size: 1.5em;
+            &:hover { cursor: pointer; 
+              font-size: 1.7em}
+          }
           .resume-icon-ps:hover { color: #00A4E4; } //blue
           .resume-icon-id:hover { color: #FF408C; } //pink
           .resume-icon-ai:hover { color: #FBB034; } //orange
@@ -149,7 +159,25 @@
           .resume-icon-windows:hover { color: #00bcf2; } //windows
           .resume-icon-mac:hover { color: #b3b3b3; }
           .resume-icon-linux:hover { color: #000; }
-          &:hover { cursor: pointer; }
+          //new
+          .resume-icon-django:hover { color: #0C3C26; }
+          .resume-icon-python:hover { color: #3776AB; }
+          .resume-icon-html:hover { color: #E54B26; }
+          .resume-icon-javascript:hover { color: #F7DF1E; }
+          .resume-icon-mssql:hover { color: #EA2729; }
+          .resume-icon-postgres:hover { color: #336791; }
+          .resume-icon-mysql-alt:hover { color: #00758F; }
+          .resume-icon-jquery:hover { color: #0868AB; }
+          .resume-icon-reactjs:hover { color: #00D8FF; }
+          .resume-icon-redux:hover { color: #8B66C5; }
+          .resume-icon-css:hover { color: #2062AF; }
+          .resume-icon-salesforce:hover { color: #00A1E0; }
+          .resume-icon-centos:hover { color: #1565AF; }
+          .resume-icon-nodejs:hover { color: #8CC84B; }
+          .resume-icon-heroku:hover { color: #430098; }
+          .resume-icon-aws:hover { color: #F68D11; }
+          .resume-icon-circleci:hover { color: #0E4C64; }
+          .resume-icon-git:hover { color: #F05033; }
 
         }
 
@@ -208,4 +236,65 @@
       }
     }
   }
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //background-color: #000;
+    background-color: rgba(0,0,0,0.7);
+    // filter:alpha(opacity=70);
+    // -moz-opacity:0.7;
+    // -khtml-opacity: 0.7;
+    // opacity: 0.7;
+    z-index: 10000;
+
+    .overlay-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      flex-direction: column;
+
+      .skill-icon-container {
+        font-size: 5em;
+        color: #fff;
+      }
+
+      .skill-title {
+        font-size: 1.2em;
+        color: #fff;
+      }
+
+      #supp-links {
+        color: rgba(255,255,255,0.8);
+        cursor: pointer;
+      }
+
+      .skill-description-container {
+        flex: 1;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+
+        iframe {
+            width: 50%;
+            background-image: url(../img/spinner.svg); 
+            background-repeat: no-repeat;
+            //background-attachment: fixed;
+            background-position: center top;
+        }
+      }
+    }
+
+    #close-overlay {
+      cursor: pointer;
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      color: #fff;
+    }
 }

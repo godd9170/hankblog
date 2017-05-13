@@ -64,11 +64,28 @@ var resumeData = {
         elem: "#saasli"
       },
       {
+        name:"<div class='lead-up'>Launched </div><div>Shakespeare.ai</div>", 
+        date:  "2017-04-30", 
+        elem: "#shakespeare"
+      },
+      {
         name:"<div class='lead-up'>Presently Working at </div><div>Saasli</div>", 
         date:  today, 
         elem: "#saasli"
       }
     ],
+    "shakespeareData" : {
+      "cols": [
+            {"id":"","label":"Duty","pattern":"","type":"string"},
+            {"id":"","label":"Percentage","pattern":"","type":"number"}
+          ],
+      "rows": [
+            {"c":[{"v":"Devops","f":null},{"v":30,"f":null}]},
+            {"c":[{"v":"Back-End Development","f":null},{"v":30,"f":null}]},
+            {"c":[{"v":"Front-End Development","f":null},{"v":30,"f":null}]},
+            {"c":[{"v":"Management","f":null},{"v":10,"f":null}]}
+          ]
+    },
     "saasliData" : {
       "cols": [
             {"id":"","label":"Duty","pattern":"","type":"string"},
@@ -119,88 +136,28 @@ var resumeData = {
             {"c":[{"v":"Technical Account Managment","f":null},{"v":15,"f":null}]},
           ]
     },
-    "electrolabData" : {
-      "cols": [
-            {"id":"","label":"Duty","pattern":"","type":"string"},
-            {"id":"","label":"Percentage","pattern":"","type":"number"}
-          ],
-      "rows": [
-            {"c":[{"v":"IT","f":null},{"v":40,"f":null}]},
-            {"c":[{"v":"Market Research","f":null},{"v":20,"f":null}]},
-            {"c":[{"v":"Administrative Assistance","f":null},{"v":40,"f":null}]},
-          ]
-    },
-    "CCEData" : {
-      "cols": [
-            {"id":"","label":"Discipline","pattern":"","type":"string"},
-            {"id":"","label":"Percentage","pattern":"","type":"number"},
-            {"id":"","role":"style","type":"string"},
-            {"id":"","role":"annotation","type":"string"}
-          ],
-      "rows": [
-            {"c":[{"v":"Intro. to System Programming","f":null},{"v":0.85,"f":null}, {'v': '#000',"f":null}, {"v":"A","f":null}]},
-            {"c":[{"v":"Analog Electronics","f":null},{"v":0.85,"f":null}, {'v': '#333',"f":null}, {"v":"A","f":null}]},
-            {"c":[{"v":"Object-Oriented Programming","f":null},{"v":0.85,"f":null}, {'v': '#666',"f":null},{"v":"A","f":null}]},
-            {"c":[{"v":"Digital System Design","f":null},{"v":0.90,"f":null}, {'v': '#999',"f":null},{"v":"A+","f":null}]},
-            {"c":[{"v":"Microprocessor","f":null},{"v":0.90,"f":null}, {'v': '#bbb',"f":null},{"v":"A+","f":null}]},
-          ]
-    },
-    "BBAData" : {
-      "cols": [
-            {"id":"","label":"Discipline","pattern":"","type":"string"},
-            {"id":"","label":"Percentage","pattern":"","type":"number"},
-            {"id":"","role":"style","type":"string"},
-            {"id":"","role":"annotation","type":"string"}
-          ],
-      "rows": [
-            {"c":[{"v":"Organizational Behaviour","f":null},{"v":0.85,"f":null}, {'v': '#000',"f":null}, {"v":"A","f":null}]},
-            {"c":[{"v":"Operations","f":null},{"v":0.80,"f":null}, {'v': '#333',"f":null}, {"v":"A-","f":null}]},
-            {"c":[{"v":"Financial Management","f":null},{"v":0.80,"f":null}, {'v': '#666',"f":null},{"v":"A-","f":null}]},
-            {"c":[{"v":"Marketing Management","f":null},{"v":0.80,"f":null}, {'v': '#999',"f":null},{"v":"A-","f":null}]},
-            {"c":[{"v":"Business Policy","f":null},{"v":0.80,"f":null}, {'v': '#bbb',"f":null},{"v":"A-","f":null}]},
-          ]
-    },
-    "scriptData" : {
-      "cols": [
-            {"id":"","label":"Discipline","pattern":"","type":"string"},
-            {"id":"","label":"Percentage","pattern":"","type":"number"},
-            {"id":"","role":"style","type":"string"},
-          ],
-      "rows": [
-            {"c":[{"v":"HTML(5)","f":null},{"v":0.90,"f":null}, {'v': '#000',"f":null}]},
-            {"c":[{"v":"CSS(3)","f":null},{"v":0.88,"f":null}, {'v': '#333',"f":null}]},
-            {"c":[{"v":"Javascript","f":null},{"v":0.85,"f":null}, {'v': '#666',"f":null}]},
-            {"c":[{"v":"ReactJs","f":null},{"v":0.80,"f":null}, {'v': '#999',"f":null}]},
-            {"c":[{"v":"D3","f":null},{"v":0.40,"f":null}, {'v': '#bbb',"f":null}]},
-          ]
-    },
-    "serverData" : {
-      "cols": [
-            {"id":"","label":"Discipline","pattern":"","type":"string"},
-            {"id":"","label":"Percentage","pattern":"","type":"number"},
-            {"id":"","role":"style","type":"string"}
-          ],
-      "rows": [
-            {"c":[{"v":"Python","f":null},{"v":0.85,"f":null}, {'v': '#000',"f":null}]},
-            {"c":[{"v":"NodeJs","f":null},{"v":0.75,"f":null}, {'v': '#333',"f":null}]},
-            {"c":[{"v":"Django","f":null},{"v":0.75,"f":null}, {'v': '#666',"f":null}]},
-            {"c":[{"v":"SQL","f":null},{"v":0.80,"f":null}, {'v': '#999',"f":null}]},
-            {"c":[{"v":"Postgres","f":null},{"v":0.60,"f":null}, {'v': '#bbb',"f":null}]},
-          ]
-    },
-    "webappData" : {
-      "cols": [
-            {"id":"","label":"Discipline","pattern":"","type":"string"},
-            {"id":"","label":"Percentage","pattern":"","type":"number"},
-            {"id":"","role":"style","type":"string"}
-          ],
-      "rows": [
-            {"c":[{"v":"Hubspot","f":null},{"v":0.80,"f":null}, {'v': '#000',"f":null}]},
-            {"c":[{"v":"Github","f":null},{"v":0.80,"f":null}, {'v': '#333',"f":null}]},
-            {"c":[{"v":"Intercom","f":null},{"v":0.85,"f":null}, {'v': '#666',"f":null}]},
-            {"c":[{"v":"Google Analytics","f":null},{"v":0.90,"f":null}, {'v': '#999',"f":null}]},
-            {"c":[{"v":"NPM","f":null},{"v":0.80,"f":null}, {'v': '#bbb',"f":null}]},
-          ]
+    "skills": {
+      "Adobe Illustrator" : "Yesssiiir",
+      "Microsoft Powerpoint": "https://www.useloom.com/embed/bbd2474a6fda4970b67afb1688fbd272",
+      "Jquery": "https://www.useloom.com/embed/443ab2527ed8494197b36623bd5441ba",
+      "Javascript" : "https://www.useloom.com/embed/1cc79114e5e34903a8e0ec27a59a752c",
+      "HTML" : "https://www.useloom.com/embed/e4674a7e63724b9a898f5bc45276c19f",
+      "CSS" : "https://www.useloom.com/embed/f2add66065644c88834527ef79e43626",
+      "Webpack" : "https://www.useloom.com/embed/8c6d3e487e9d4a61bcd9f86ee57bd160",
+      "React" : "https://www.useloom.com/embed/1f897746ea2c4dba8f86388a3be4ac69",
+      "Redux" : "https://www.useloom.com/embed/7f975f66eb8741568272b5f568082e07",
+      "Heroku" : "https://www.useloom.com/embed/ce666eb057384aa9aa6cd3117a40e857",
+      "AWS" : "https://www.useloom.com/embed/0124f0fff0704152b73775a6d01d2b14",
+      "CircleCI" : "https://www.useloom.com/embed/c5f54ff855904444ba15059348c4f4ca",
+      "Git" : "https://www.useloom.com/embed/f3639ea5e35a481187977125dd2736ae",
+      "Django" : "https://www.useloom.com/embed/4143c66c0f9844f59361dd81cb2ce7bd",
+      "Node Js" : "https://www.useloom.com/embed/44275a809844430d929febe37b7ffdb8",
+      "PostgreSQL" : "https://www.useloom.com/embed/c16903d24bce456e9cf7dac5a28550aa",
+      "MySQL" : "https://www.useloom.com/embed/f0b2bb1d06df4dd599bd416f6b507ee2",
+      "Microsoft SQL Server" : "https://www.useloom.com/embed/c63d4a8ddde745c3a5c2ff71fad23be8",
+      "Python" : "https://www.useloom.com/embed/14955d642d744c03b98b4b0f88cf27a8",
+      "Salesforce (APEX)" : "https://www.useloom.com/embed/2e59efc13422495f87259a2329d7997b",
+      "Unix (CentOS)" : "https://www.useloom.com/embed/674909cfeca3449b863fe66d54b0b620"
     }
 };
 

@@ -183,8 +183,7 @@ var TimeKnots = {
       .duration(100)
       .style("opacity", .9);
 
-    })
-    .on("mouseout", function(d){
+    }).on("mouseout", function(d){
         if(cfg.onDateMouseout){
           cfg.onDateMouseout(d)
         } //trigger mouseout callback
@@ -193,7 +192,13 @@ var TimeKnots = {
         .duration(100).attr("r", function(d){if(d.radius != undefined){return d.radius} return cfg.radius});
         tip.transition()
         .duration(100)
-    .style("opacity", 0)});
+    .style("opacity", 0)
+    }).on("click", function(e) {
+      $('html, body').animate({
+            scrollTop: $(e.elem).offset().top + 'px'
+        }, 'fast'); //move this party to the clicked experience
+        return this; // for chaining...
+    });
 
     //Adding start and end labels
     if(cfg.showLabels != false){

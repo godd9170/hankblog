@@ -1,0 +1,186 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?bfl3o0');
+  src:  url('fonts/icomoon.eot?bfl3o0#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?bfl3o0') format('truetype'),
+    url('fonts/icomoon.woff?bfl3o0') format('woff'),
+    url('fonts/icomoon.svg?bfl3o0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-apache:before {
+  content: "\e930";
+}
+.icon-c:before {
+  content: "\e931";
+}
+.icon-docker:before {
+  content: "\e932";
+}
+.icon-tomcat:before {
+  content: "\e933";
+}
+.icon-nodejs:before {
+  content: "\e934";
+}
+.icon-django:before {
+  content: "\e92f";
+}
+.icon-html:before {
+  content: "\e92e";
+}
+.icon-cancel:before {
+  content: "\e90f";
+}
+.icon-javascript:before {
+  content: "\e910";
+}
+.icon-salesforce:before {
+  content: "\e915";
+}
+.icon-redux:before {
+  content: "\e916";
+}
+.icon-circleci:before {
+  content: "\e917";
+}
+.icon-wordpress:before {
+  content: "\e918";
+}
+.icon-svg:before {
+  content: "\e919";
+}
+.icon-shell:before {
+  content: "\e91a";
+}
+.icon-sass:before {
+  content: "\e91b";
+}
+.icon-reactjs:before {
+  content: "\e91c";
+}
+.icon-python:before {
+  content: "\e91d";
+}
+.icon-postgres:before {
+  content: "\e91e";
+}
+.icon-postgres-alt:before {
+  content: "\e91f";
+}
+.icon-mysql-alt:before {
+  content: "\e920";
+}
+.icon-mysql:before {
+  content: "\e921";
+}
+.icon-mssql:before {
+  content: "\e922";
+}
+.icon-jquery:before {
+  content: "\e923";
+}
+.icon-heroku:before {
+  content: "\e924";
+}
+.icon-google-developers:before {
+  content: "\e925";
+}
+.icon-git:before {
+  content: "\e926";
+}
+.icon-debian:before {
+  content: "\e927";
+}
+.icon-css:before {
+  content: "\e928";
+}
+.icon-aws:before {
+  content: "\e929";
+}
+.icon-bootstrap:before {
+  content: "\e92a";
+}
+.icon-centos:before {
+  content: "\e92b";
+}
+.icon-d3:before {
+  content: "\e92c";
+}
+.icon-redis:before {
+  content: "\e92d";
+}
+.icon-webpack:before {
+  content: "\e90d";
+}
+.icon-ribbon:before {
+  content: "\e900";
+}
+.icon-skills:before {
+  content: "\e901";
+}
+.icon-volunteer:before {
+  content: "\e902";
+}
+.icon-education:before {
+  content: "\e903";
+}
+.icon-experience:before {
+  content: "\e904";
+}
+.icon-diploma2:before {
+  content: "\e905";
+}
+.icon-article:before {
+  content: "\e90e";
+}
+.icon-ps:before {
+  content: "\e906";
+}
+.icon-ai:before {
+  content: "\e907";
+}
+.icon-id:before {
+  content: "\e908";
+}
+.icon-docx:before {
+  content: "\e909";
+}
+.icon-ppt:before {
+  content: "\e90a";
+}
+.icon-xlsx:before {
+  content: "\e90b";
+}
+.icon-finalcut:before {
+  content: "\e90c";
+}
+.icon-npm-01:before {
+  content: "\e911";
+}
+.icon-linux:before {
+  content: "\e912";
+}
+.icon-mac:before {
+  content: "\e913";
+}
+.icon-windows:before {
+  content: "\e914";
+}
+
