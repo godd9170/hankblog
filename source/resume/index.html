@@ -411,7 +411,7 @@
         //animate the other software section
         $('.software-icon').click(function(e) {
             $('#skill-icon').removeClass(); //get rid of the last featured icon
-            $('#supp-links').val(null);
+            $('#supp-links').text(null);
             $('#skill-icon').addClass(e.currentTarget.className.split(" ")[0]); //switch the icon to the new program
             $('#skill-video').attr("src", resumeData['skills'][e.currentTarget.dataset['name']]);
             $('#skill-title').text(e.currentTarget.dataset['name']);
