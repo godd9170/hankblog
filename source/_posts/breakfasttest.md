@@ -3,7 +3,6 @@ date: 2018-02-27 20:03:17
 banner: '/images/breakfast.jpg'
 titleColour: '#FFF'
 tags: ['coworkers', 'mental health']
-
 ---
 
 I've nowhere near the sample size to start formulating laws, nor do I think you can just make up a law - however I feel like I'm on to something here. I've now had the (dis)pleasure of working on upwards of 10 different teams in a professional setting for more than a few months. Long enough for the honeymoon effect to end, and for a true assessment of the character of those surrounding me. Invariably some folks transcend a professional relationship, and some folks you tolerate only because you're literally paid to do so. Once you've reached this state, you're able to apply my law.
