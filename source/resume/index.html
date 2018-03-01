@@ -1,35 +1,36 @@
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="./assets/css/grid.css" />
-        <link rel="stylesheet" type="text/css" href="./assets/css/resume.css" />
-        <link rel="stylesheet" type="text/css" href="./assets/css/resume-icons.css" />
-        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script src="./assets/js/timeknots.js" type="application/javascript"></script>
-        <script src="./assets/js/data.js"></script>
-        <script src="./assets/js/charts.js"></script>
-    </head>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./assets/css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/resume.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/resume-icons.css" />
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./assets/js/timeknots.js" type="application/javascript"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/charts.js"></script>
+</head>
 
 <body>
     <div class="resume">
 
-    <!-- TITLE -->
-    <div class="Grid Grid--gutters Grid--full large-Grid--fit u-textCenter">
-        <div class="Grid-cell"> 
-            <div class="resume-title">
-                <span class="title">Henry Goddard</span>
-                </br>
-                <span class="subtitle">interactive</span>
+        <!-- TITLE -->
+        <div class="Grid Grid--gutters Grid--full large-Grid--fit u-textCenter">
+            <div class="Grid-cell">
+                <div class="resume-title">
+                    <span class="title">Henry Goddard</span>
+                    </br>
+                    <span class="subtitle">interactive</span>
+                </div>
             </div>
         </div>
-    </div>
 
 
-    <!-- Experience -->
+        <!-- Experience -->
         <div class="Grid Grid--gutters">
-            <div class="Grid-cell"> 
+            <div class="Grid-cell">
                 <div class="section-header">
-                    <i class="resume-icon-experience"></i>Experience 
+                    <i class="resume-icon-experience"></i>Experience
                 </div>
             </div>
         </div>
@@ -37,19 +38,54 @@
         <!-- Timeline -->
         <div class="Grid Grid--gutters timeline">
             <div class="Grid-cell">
-                 <div id="timeline1" ></div>
+                <div id="timeline1"></div>
             </div>
         </div>
 
-        <!-- Shakespeare -->
         <div class="Grid Grid--gutters Grid--full large-Grid--fit u-textCenter row">
+            <!-- Guestlogix -->
+            <div id="guestlogix" class="Grid-cell cell">
+                <div class="cell-header">
+                    <div class="badge">Engineering</div>
+                    <div class="workplace-icon">
+                        <a href="http://www.guestlogix.com">Guestlogix</a>
+                    </div>
+                    <div class="workplace-title">Software Developer</div>
+                </div>
+                <div class="Grid  cell-body">
+                    <div class="Grid-cell description">
+                        <div class="timeframe">
+                            June 2017 - Present
+                        </div>
+                        <p>
+                            Guestlogix is a SaaS application for airlines. It provides all the tooling to sell goods offline on a plane. Think "Shopify
+                            in the Sky".
+                        </p>
+                        <p>
+                            At Guestlogix I helped take version 5.0 from concept to enterprise application in 8 months. I worked predominately on the
+                            web console that enables administraion of product campaigns, consumption of analytics, fleet
+                            management etc. I also oversee a team of four developers.
+                        </p>
+                    </div>
+                    <div class="Grid-cell chart">
+                        <div class="duties-title-container">
+                            <span class="duties-title">Duties</span>
+                        </div>
+                        <div id="guestlogix-duties"></div>
+                        <div class="duties-footer">hover over a slice to learn more</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Shakespeare -->
             <div id="shakespeare" class="Grid-cell cell">
                 <div class="cell-header">
                     <div class="badge">Engineering</div>
-                    <div class="workplace-icon"><a href="http://www.shakespeare.ai">Shakespeare</a></div>
+                    <div class="workplace-icon">
+                        <a href="http://www.shakespeare.ai">Shakespeare</a>
+                    </div>
                     <div class="workplace-title">Lead Developer</div>
                 </div>
-                <div class="Grid cell-body">
+                <div class="Grid  cell-body">
                     <div class="Grid-cell description">
                         <div class="timeframe">
                             February 2017 - Present
@@ -58,7 +94,9 @@
                             Shakespeare helps outbound salespeople send personalized emails at a fraction of the time.
                         </p>
                         <p>
-                            Shakespeare was my first opportunity to build a production web app from scratch. I made the majority of decisions in terms of tech stack, production direction, deployment and how the team operated as a whole. I had the pleasure of managing two awesome developers.
+                            Shakespeare was my first opportunity to build a production web app from scratch. I made the majority of decisions in terms
+                            of tech stack, production direction, deployment and how the team operated as a whole. I had the
+                            pleasure of managing two awesome developers.
                         </p>
                     </div>
                     <div class="Grid-cell chart">
@@ -76,19 +114,24 @@
             <div id="saasli" class="Grid-cell cell">
                 <div class="cell-header">
                     <div class="badge">Solution Delivery Engineer</div>
-                    <div class="workplace-icon"><a href="http://www.saasli.com">Saasli</a></div>
+                    <div class="workplace-icon">
+                        <a href="http://www.saasli.com">Saasli</a>
+                    </div>
                     <div class="workplace-title">Solution Delivery Engineer</div>
                 </div>
-                <div class="Grid cell-body">
+                <div class="Grid  cell-body">
                     <div class="Grid-cell description">
                         <div class="timeframe">
                             April 2016 - Present
                         </div>
                         <p>
-                            Saasli helps companies get the most out of Salesforce.com. By re-imagining page layouts and automated processes, your SaaS business can scale with ease.
+                            Saasli helps companies get the most out of Salesforce.com. By re-imagining page layouts and automated processes, your SaaS
+                            business can scale with ease.
                         </p>
                         <p>
-                            Before working at Saasli I thought I had a strong foundation in how modern sales/marketing teams sourced and closed business. Founded by two Sales leaders from Salesforce.com, Saasli has opened my eyes into the world of enterprise software sales.
+                            Before working at Saasli I thought I had a strong foundation in how modern sales/marketing teams sourced and closed business.
+                            Founded by two Sales leaders from Salesforce.com, Saasli has opened my eyes into the world of
+                            enterprise software sales.
                         </p>
                     </div>
                     <div class="Grid-cell chart">
@@ -104,16 +147,19 @@
             <div id="beagle" class="Grid-cell cell">
                 <div class="cell-header">
                     <div class="badge">Co-Founder</div>
-                    <div class="workplace-icon"><a href="http://www.beagle.ai">Beagle</a></div>
+                    <div class="workplace-icon">
+                        <a href="http://www.beagle.ai">Beagle</a>
+                    </div>
                     <div class="workplace-title">Co-Founder</div>
                 </div>
-                <div class="Grid cell-body">
+                <div class="Grid  cell-body">
                     <div class="Grid-cell description">
                         <div class="timeframe">
                             April 2014 - February 2016
                         </div>
                         <p>
-                            Beagle is legal document analyzing software. Co-founded by myself and 7 other individuals in 2014, we aimed to empower SMBs to comprehend legal paper better, faster and cheaper.
+                            Beagle is legal document analyzing software. Co-founded by myself and 7 other individuals in 2014, we aimed to empower SMBs
+                            to comprehend legal paper better, faster and cheaper.
                         </p>
                         <p>
                             Being such a small shop, I wore many hats, everything from front-end development to large presentations.
@@ -135,10 +181,12 @@
             <div id="axonify" class="Grid-cell cell">
                 <div class="cell-header">
                     <div class="badge">Co-op</div>
-                    <div class="workplace-icon"><a href="http://www.axonify.com">Axonify</a></div>
+                    <div class="workplace-icon">
+                        <a href="http://www.axonify.com">Axonify</a>
+                    </div>
                     <div class="workplace-title">Sales/Marketing Co-Op</div>
                 </div>
-                <div class="Grid cell-body">
+                <div class="Grid  cell-body">
                     <div class="Grid-cell description">
                         <div class="timeframe">
                             September 2013 - December 2013
@@ -147,10 +195,12 @@
                             September 2014 - December 2014
                         </div>
                         <p>
-                            Axonify is the world's first eLearning platform that delivers knowledge in a fun, bite-sized and personalized way. Using the perfect combination of brain science, gamification and personalized learning. 
+                            Axonify is the world's first eLearning platform that delivers knowledge in a fun, bite-sized and personalized way. Using
+                            the perfect combination of brain science, gamification and personalized learning.
                         </p>
                         <p>
-                            It was my duty to translate sales requirements into visuals to help facilitate a solution selling process. Technical product demo prep, CRM data analysis and lead generation.
+                            It was my duty to translate sales requirements into visuals to help facilitate a solution selling process. Technical product
+                            demo prep, CRM data analysis and lead generation.
                         </p>
                     </div>
                     <div class="Grid-cell chart">
@@ -166,10 +216,12 @@
             <div id="d2l" class="Grid-cell cell">
                 <div class="cell-header">
                     <div class="badge">Co-op</div>
-                    <div class="workplace-icon"><a href="http://www.d2l.com/">Desire2Learn</a></div>
+                    <div class="workplace-icon">
+                        <a href="http://www.d2l.com/">Desire2Learn</a>
+                    </div>
                     <div class="workplace-title">Technical Support Specialist - Tier 2</div>
                 </div>
-                <div class="Grid cell-body">
+                <div class="Grid  cell-body">
                     <div class="Grid-cell description">
                         <div class="timeframe">
                             September 2013 - December 2013
@@ -178,10 +230,14 @@
                             September 2014 - December 2014
                         </div>
                         <p>
-                            "Everyone should work in support at least once." - was the advice that I was given by the Account Managers at D2L, and I wholeheartedly agree. It's easy to get too focused on new customers, new features and new markets, but what can make a good company great is how they take care of existing customers. 
+                            "Everyone should work in support at least once." - was the advice that I was given by the Account Managers at D2L, and I
+                            wholeheartedly agree. It's easy to get too focused on new customers, new features and new markets,
+                            but what can make a good company great is how they take care of existing customers.
                         </p>
                         <p>
-                            I was responsible for handling admin user tickets that included everything from SQL database maintenance to app pool resets. I'd also aid Technical Account Managers in explaining issues and their corresponding remedies via conference calls.
+                            I was responsible for handling admin user tickets that included everything from SQL database maintenance to app pool resets.
+                            I'd also aid Technical Account Managers in explaining issues and their corresponding remedies
+                            via conference calls.
                         </p>
                     </div>
                     <div class="Grid-cell chart">
@@ -197,7 +253,7 @@
 
         <!-- Skills -->
         <div class="Grid Grid--gutters">
-            <div class="Grid-cell"> 
+            <div class="Grid-cell">
                 <div class="section-header">
                     <i class="resume-icon-skills"></i>Skills
                 </div>
@@ -207,34 +263,34 @@
         <!-- Row One -->
         <div class="Grid Grid--gutters Grid--full large-Grid--fit u-textCenter row">
             <div class="Grid-cell cell">
-                 <div class="cell-header">
+                <div class="cell-header">
                     <div class="workplace-icon">Front-End</div>
                 </div>
                 <div class="Grid cell-body">
                     <div class="other-software">
                         <div class="Grid Grid--gutters">
                             <div class="Grid-cell">
-                                <i class="resume-icon-javascript software-icon" data-width='75' data-name="Javascript"/>
+                                <i class="resume-icon-javascript software-icon" data-width='75' data-name="Javascript" />
                             </div>
                             <div class="Grid-cell">
-                                <i class="resume-icon-html software-icon" data-width="80" data-name="HTML"/>
+                                <i class="resume-icon-html software-icon" data-width="80" data-name="HTML" />
                             </div>
                             <div class="Grid-cell">
-                                <i class="resume-icon-css software-icon" data-width="60" data-name="CSS"/>
+                                <i class="resume-icon-css software-icon" data-width="60" data-name="CSS" />
                             </div>
                             <div class="Grid-cell">
-                                <i class="resume-icon-jquery software-icon" data-width="75" data-name="Jquery"/>
+                                <i class="resume-icon-jquery software-icon" data-width="75" data-name="Jquery" />
                             </div>
                         </div>
                         <div class="Grid Grid--gutters">
                             <div class="Grid-cell">
-                                <i class="resume-icon-webpack software-icon" data-width='75' data-name="Webpack"/>
+                                <i class="resume-icon-webpack software-icon" data-width='75' data-name="Webpack" />
                             </div>
                             <div class="Grid-cell">
-                                <i class="resume-icon-reactjs software-icon" data-width="80" data-name="React"/>
+                                <i class="resume-icon-reactjs software-icon" data-width="80" data-name="React" />
                             </div>
                             <div class="Grid-cell">
-                                <i class="resume-icon-redux software-icon" data-width="60" data-name="Redux"/>
+                                <i class="resume-icon-redux software-icon" data-width="60" data-name="Redux" />
                             </div>
                             <div class="Grid-cell">
                                 <!--placeholder-->
@@ -245,23 +301,23 @@
             </div>
             <!-- ho -->
             <div class="Grid-cell cell">
-                 <div class="cell-header">
+                <div class="cell-header">
                     <div class="workplace-icon">Devops</div>
                 </div>
                 <div class="Grid cell-body">
                     <div class="other-software">
                         <div class="Grid Grid--gutters">
                             <div class="Grid-cell">
-                                <i class="resume-icon-heroku software-icon" data-width='75' data-name="Heroku"/>
+                                <i class="resume-icon-heroku software-icon" data-width='75' data-name="Heroku" />
                             </div>
                             <div class="Grid-cell">
-                                <i class="resume-icon-aws software-icon" data-width="80" data-name="Amazon Web Services"/>
+                                <i class="resume-icon-aws software-icon" data-width="80" data-name="Amazon Web Services" />
                             </div>
                             <div class="Grid-cell">
-                                <i class="resume-icon-circleci software-icon" data-width="60" data-name="CircleCI"/>
+                                <i class="resume-icon-circleci software-icon" data-width="60" data-name="CircleCI" />
                             </div>
                             <div class="Grid-cell">
-                                <i class="resume-icon-git software-icon" data-width="75" data-name="Git"/>
+                                <i class="resume-icon-git software-icon" data-width="75" data-name="Git" />
                             </div>
                         </div>
                     </div>
@@ -271,37 +327,37 @@
         <!-- Row Two -->
         <div class="Grid Grid--gutters Grid--full large-Grid--fit u-textCenter row">
             <div class="Grid-cell cell">
-                 <div class="cell-header">
+                <div class="cell-header">
                     <div class="workplace-icon">Server-Side</div>
                 </div>
                 <div class="Grid cell-body">
                     <div class="other-software">
                         <div class="Grid Grid--gutters">
                             <div class="Grid-cell">
-                                <i class="resume-icon-django software-icon" data-width='75' data-name="Django"/>
+                                <i class="resume-icon-django software-icon" data-width='75' data-name="Django" />
                             </div>
                             <div class="Grid-cell">
-                                <i class="resume-icon-nodejs software-icon" data-width="80" data-name="Node Js"/>
+                                <i class="resume-icon-nodejs software-icon" data-width="80" data-name="Node Js" />
                             </div>
                             <div class="Grid-cell">
-                                <i class="resume-icon-postgres software-icon" data-width="60" data-name="PostgreSQL"/>
+                                <i class="resume-icon-postgres software-icon" data-width="60" data-name="PostgreSQL" />
                             </div>
                             <div class="Grid-cell">
-                                <i class="resume-icon-mysql-alt software-icon" data-width="75" data-name="MySQL"/>
+                                <i class="resume-icon-mysql-alt software-icon" data-width="75" data-name="MySQL" />
                             </div>
                         </div>
                         <div class="Grid Grid--gutters">
                             <div class="Grid-cell">
-                                <i class="resume-icon-mssql software-icon" data-width="75" data-name="Microsoft SQL Server"/>
+                                <i class="resume-icon-mssql software-icon" data-width="75" data-name="Microsoft SQL Server" />
                             </div>
                             <div class="Grid-cell">
-                                <i class="resume-icon-python software-icon" data-width='75' data-name="Python"/>
+                                <i class="resume-icon-python software-icon" data-width='75' data-name="Python" />
                             </div>
                             <div class="Grid-cell">
-                                <i class="resume-icon-salesforce software-icon" data-width="80" data-name="Salesforce (APEX)"/>
+                                <i class="resume-icon-salesforce software-icon" data-width="80" data-name="Salesforce (APEX)" />
                             </div>
                             <div class="Grid-cell">
-                                <i class="resume-icon-centos software-icon" data-width="60" data-name="Unix (CentOS)"/>
+                                <i class="resume-icon-centos software-icon" data-width="60" data-name="Unix (CentOS)" />
                             </div>
                         </div>
                     </div>
@@ -312,7 +368,7 @@
 
         <!-- Education -->
         <div class="Grid Grid--gutters">
-            <div class="Grid-cell"> 
+            <div class="Grid-cell">
                 <div class="section-header">
                     <i class="resume-icon-education"></i>Education
                 </div>
@@ -322,9 +378,11 @@
         <!-- Row One -->
         <div class="Grid Grid--gutters Grid--full large-Grid--fit u-textCenter row">
             <div class="Grid-cell cell">
-                 <div id="wlu" class="cell-header">
+                <div id="wlu" class="cell-header">
                     <div class="badge">BSc</div>
-                    <div class="workplace-icon smaller"><a href="https://legacy.wlu.ca/page.php?grp_id=2&p=31">Computing & Computer Electronics</a></div>
+                    <div class="workplace-icon smaller">
+                        <a href="https://legacy.wlu.ca/page.php?grp_id=2&p=31">Computing & Computer Electronics</a>
+                    </div>
                     <div class="workplace-title">Wilfrid Laurier University</div>
                 </div>
                 <div class="Grid cell-body">
@@ -332,20 +390,24 @@
                 </div>
             </div>
             <div class="Grid-cell cell">
-                 <div class="cell-header">
+                <div class="cell-header">
                     <div class="badge">BBA</div>
-                    <div class="workplace-icon"><a href="http://legacy.wlu.ca/calendars/program.php?cal=1&d=1206&p=2484&s=566&y=57">Business Administration</a></div>
-                    <div class="workplace-title"><a href="https://www.wlu.ca/lazaridis-school-of-business-and-economics/index.html">Lazardis School of Business</a></div>
+                    <div class="workplace-icon">
+                        <a href="http://legacy.wlu.ca/calendars/program.php?cal=1&d=1206&p=2484&s=566&y=57">Business Administration</a>
+                    </div>
+                    <div class="workplace-title">
+                        <a href="https://www.wlu.ca/lazaridis-school-of-business-and-economics/index.html">Lazardis School of Business</a>
+                    </div>
                 </div>
                 <div class="Grid cell-body">
-                     <div class="chart" id="BBA-grades"></div>
+                    <div class="chart" id="BBA-grades"></div>
                 </div>
             </div>
         </div>
 
         <!-- Volunteer -->
         <div class="Grid Grid--gutters">
-            <div class="Grid-cell"> 
+            <div class="Grid-cell">
                 <div class="section-header">
                     <i class="resume-icon-volunteer"></i>Volunteer
                 </div>
@@ -353,19 +415,21 @@
         </div>
         <!-- Row 1 -->
         <div class="Grid Grid--gutters">
-            <div class="Grid-cell pub"> 
+            <div class="Grid-cell pub">
                 <a href="https://www.rotary.org/">
                     <img src="./assets/img/rotary.svg"></img>
                 </a>
             </div>
             <div class="Grid-cell pub">
-                <a href="http://www.thecord.ca/hyper-sensitivity-impedes-on-collective-development/"><img src="./assets/img/cord.svg"></a>
+                <a href="http://www.thecord.ca/hyper-sensitivity-impedes-on-collective-development/">
+                    <img src="./assets/img/cord.svg">
+                </a>
             </div>
         </div>
 
         <!-- Publications -->
         <div class="Grid Grid--gutters">
-            <div class="Grid-cell"> 
+            <div class="Grid-cell">
                 <div class="section-header">
                     <i class="resume-icon-article"></i>Publications
                 </div>
@@ -374,23 +438,31 @@
 
         <!-- Row 1 -->
         <div class="Grid Grid--gutters">
-            <div class="Grid-cell pub"> 
+            <div class="Grid-cell pub">
                 <a href="http://wlu.ca/spotlights/summer-2015/laurier-students-work-in-front-end-development-for-legal-startup-company.html">
                     <img src="./assets/img/wlu.png"></img>
                 </a>
             </div>
             <div class="Grid-cell pub">
-                <a href="http://www.therecord.com/news-story/5715984-look-out-lawyers-here-comes-beagle/"><img src="./assets/img/record.jpg"></a>
+                <a href="http://www.therecord.com/news-story/5715984-look-out-lawyers-here-comes-beagle/">
+                    <img src="./assets/img/record.jpg">
+                </a>
             </div>
-            <div class="Grid-cell pub"> 
-                <a href="http://www.cbc.ca/news/canada/kitchener-waterloo/kitchener-startup-beagle-helps-make-sense-of-legal-contracts-1.3145062"><img src="./assets/img/cbc.png"></img></a>
+            <div class="Grid-cell pub">
+                <a href="http://www.cbc.ca/news/canada/kitchener-waterloo/kitchener-startup-beagle-helps-make-sense-of-legal-contracts-1.3145062">
+                    <img src="./assets/img/cbc.png"></img>
+                </a>
             </div>
         </div>
     </div>
-    <div id="overlay" style="display:none"> 
-        <div id="close-overlay"><i class="resume-icon-close"></i></div>
+    <div id="overlay" style="display:none">
+        <div id="close-overlay">
+            <i class="resume-icon-close"></i>
+        </div>
         <div class="overlay-content">
-            <div class="skill-icon-container"><i id="skill-icon"></i></div>
+            <div class="skill-icon-container">
+                <i id="skill-icon"></i>
+            </div>
             <div id="skill-title" class="skill-title"></div>
             <div id="supp-links"></div>
             <div id="skill-description" class="skill-description-container">
@@ -400,7 +472,7 @@
     </div>
     <script>
         //Launch the welcome overlay
-        $( document ).ready(function() {
+        $(document).ready(function () {
             $('#skill-video').attr("src", "https://www.useloom.com/embed/0511856353884851a7aad90f52f856f3");
             $('#skill-video').attr("autoplay", 1);
             $('#skill-title').text('Welcome!');
@@ -409,7 +481,7 @@
 
 
         //animate the other software section
-        $('.software-icon').click(function(e) {
+        $('.software-icon').click(function (e) {
             $('#skill-icon').removeClass(); //get rid of the last featured icon
             $('#supp-links').text(null);
             $('#skill-icon').addClass(e.currentTarget.className.split(" ")[0]); //switch the icon to the new program
@@ -417,10 +489,10 @@
             $('#skill-title').text(e.currentTarget.dataset['name']);
 
             //For now, we'll apply supp links for the few they're required. Ultimately this should be in the json.
-            if(e.currentTarget.dataset['name'] == 'React') {
+            if (e.currentTarget.dataset['name'] == 'React') {
                 var game = $('<div/>');
                 game.text('Wiki Game');
-                game.click(function(e) {
+                game.click(function (e) {
                     var redirectWindow = window.open('http://wiki.henrygoddard.com', '_blank');
                     redirectWindow.location;
                 });
@@ -431,14 +503,14 @@
         });
 
         //Close overlay on 'close' click
-        $('#close-overlay').click(function(e) {
+        $('#close-overlay').click(function (e) {
             $('#overlay').hide();
             $('#skill-video').attr("src", null); //shut me up
         });
 
         //Bind escape to close
-        $(document).keyup(function(e){
-            if(e.keyCode === 27) {
+        $(document).keyup(function (e) {
+            if (e.keyCode === 27) {
                 $('#overlay').hide();
                 $('#skill-video').attr("src", null); //shut me up
             }

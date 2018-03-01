@@ -1,17 +1,17 @@
 // Load up some google charts
-google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.load("current", { packages: ["corechart", "bar"] });
 
 // When the google charts library loads, call the drawCharts function to get this party started.
 google.charts.setOnLoadCallback(drawCharts);
 
-
-
-var onDateMouseover = function(e){
-  $(e.elem).fadeTo(400, 0.2, function() { $(e.elem).fadeTo(400, 1); });
+var onDateMouseover = function(e) {
+  $(e.elem).fadeTo(400, 0.2, function() {
+    $(e.elem).fadeTo(400, 1);
+  });
 };
 
-var onDateMouseout = function(e){
-  $(e.elem).css({'color': '#000'});
+var onDateMouseout = function(e) {
+  $(e.elem).css({ color: "#000" });
 };
 
 var skillClick = function(e, chartid) {
@@ -20,56 +20,46 @@ var skillClick = function(e, chartid) {
   if (e.targetID.match(regex)) {
     text = resumeText[chartid][e.targetID.match(regex)[1]];
   } else {
-    text = resumeText[chartid + '-default'];
+    text = resumeText[chartid + "-default"];
   }
-  $('#' + chartid + '-text').html(text); //apply the text
+  $("#" + chartid + "-text").html(text); //apply the text
 };
 
 function drawCharts() {
   //Draw Timeline
 
-  $('#timeline1').empty(); //first empty the div (so not to repeat it)
-  TimeKnots.draw("#timeline1", 
-    resumeData['timelineData'], 
-      { dateFormat: "%B %Y", 
-        color: "#222", 
-        showLabels: true, 
-        labelFormat: "%Y", 
-        width: $('#timeline1').width(), 
-        onDateMouseover: onDateMouseover, 
-        onDateMouseout: onDateMouseout 
-      }
-    );
-
+  $("#timeline1").empty(); //first empty the div (so not to repeat it)
+  TimeKnots.draw("#timeline1", resumeData["timelineData"], {
+    dateFormat: "%B %Y",
+    color: "#222",
+    showLabels: true,
+    labelFormat: "%Y",
+    width: $("#timeline1").width(),
+    onDateMouseover: onDateMouseover,
+    onDateMouseout: onDateMouseout
+  });
 
   //Draw Google Charts
 
-  var formatter = new google.visualization.NumberFormat({pattern:'#,###%'}); //percentage formatter
+  var formatter = new google.visualization.NumberFormat({ pattern: "#,###%" }); //percentage formatter
 
   //Common Options for Experience Section
   var experienceOptions = {
     legend: {
-      position : 'none'
+      position: "none"
     },
     chartArea: {
       top: 7,
       left: 7,
-      width: '92%',
-      height: '92%'
+      width: "92%",
+      height: "92%"
     },
-    animation:{
+    animation: {
       startup: true,
       duration: 500,
-      easing: 'in',
+      easing: "in"
     },
-    colors:
-      [ '#000',
-        '#222',
-        '#444',
-        '#666',
-        '#888',
-        '#aaa'
-      ]
+    colors: ["#000", "#222", "#444", "#666", "#888", "#aaa"]
   };
 
   // //Common Options for Education Section
@@ -129,9 +119,9 @@ function drawCharts() {
   //   },
   // };
 
-//
-// SKILLS
-//
+  //
+  // SKILLS
+  //
 
   // //Scripting Skills
   // var scriptData = new google.visualization.DataTable(resumeData['scriptData']);
@@ -163,9 +153,9 @@ function drawCharts() {
   //   skillClick(e, 'webapp');
   // }); //add onclick
 
-//
-// EDUCATION
-//
+  //
+  // EDUCATION
+  //
 
   // //Computing and Computer Electronics
   // var CCEData = new google.visualization.DataTable(resumeData['CCEData']);
@@ -179,33 +169,56 @@ function drawCharts() {
   // formatter.format(BBAData, 1);
   // BBAchart.draw(BBAData, educationOptions);
 
-//
-// EXPERIENCE
-//
+  //
+  // EXPERIENCE
+  //
 
-  //Shakespeate Duties
-  var shakespeareData = new google.visualization.DataTable(resumeData['shakespeareData']);
-  var shakespeareChart = new google.visualization.PieChart(document.getElementById('shakespeare-duties'));
+  //Guestlogix Duties
+  var guestlogixData = new google.visualization.DataTable(
+    resumeData["guestlogixData"]
+  );
+  var guestlogixChart = new google.visualization.PieChart(
+    document.getElementById("guestlogix-duties")
+  );
+  guestlogixChart.draw(guestlogixData, experienceOptions);
+
+  //Shakespeare Duties
+  var shakespeareData = new google.visualization.DataTable(
+    resumeData["shakespeareData"]
+  );
+  var shakespeareChart = new google.visualization.PieChart(
+    document.getElementById("shakespeare-duties")
+  );
   shakespeareChart.draw(shakespeareData, experienceOptions);
 
   //Saasli Duties
-  var saasliData = new google.visualization.DataTable(resumeData['saasliData']);
-  var saasliChart = new google.visualization.PieChart(document.getElementById('saasli-duties'));
+  var saasliData = new google.visualization.DataTable(resumeData["saasliData"]);
+  var saasliChart = new google.visualization.PieChart(
+    document.getElementById("saasli-duties")
+  );
   saasliChart.draw(saasliData, experienceOptions);
 
   //Beagle Duties
-  var beagleData = new google.visualization.DataTable(resumeData['beagleData']);
-  var beagleChart = new google.visualization.PieChart(document.getElementById('beagle-duties'));
+  var beagleData = new google.visualization.DataTable(resumeData["beagleData"]);
+  var beagleChart = new google.visualization.PieChart(
+    document.getElementById("beagle-duties")
+  );
   beagleChart.draw(beagleData, experienceOptions);
 
   //Axonify Duties
-  var axonifyData = new google.visualization.DataTable(resumeData['axonifyData']);
-  var axonifyChart = new google.visualization.PieChart(document.getElementById('axonify-duties'));
+  var axonifyData = new google.visualization.DataTable(
+    resumeData["axonifyData"]
+  );
+  var axonifyChart = new google.visualization.PieChart(
+    document.getElementById("axonify-duties")
+  );
   axonifyChart.draw(axonifyData, experienceOptions);
 
   //D2L Duties
-  var d2lData = new google.visualization.DataTable(resumeData['d2lData']);
-  var d2lChart = new google.visualization.PieChart(document.getElementById('d2l-duties'));
+  var d2lData = new google.visualization.DataTable(resumeData["d2lData"]);
+  var d2lChart = new google.visualization.PieChart(
+    document.getElementById("d2l-duties")
+  );
   d2lChart.draw(d2lData, experienceOptions);
 
   //Electrolab Duties
@@ -214,11 +227,10 @@ function drawCharts() {
   // electrolabChart.draw(electrolabData, experienceOptions);
 }
 
-
-//create trigger to resizeEnd event     
+//create trigger to resizeEnd event
 $(window).resize(function() {
-    if(this.resizeTO) clearTimeout(this.resizeTO);
-    this.resizeTO = setTimeout(function() {
-        drawCharts();
-    }, 500);
+  if (this.resizeTO) clearTimeout(this.resizeTO);
+  this.resizeTO = setTimeout(function() {
+    drawCharts();
+  }, 500);
 });
